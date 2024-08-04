@@ -1,0 +1,94 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  scroll-margin-top: 50px;
+}
+
+button:focus{
+  outline: none;
+}
+
+.App {
+  background: #010C15;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appInnerContainer{
+  border-radius: 8px;
+  border: 1px solid #1E2D3D;
+  background: #011627;
+  margin: 17px;
+  height: 95%;
+  width: 100%;
+  position: relative;
+}
+
+.appInnerContainer main{
+  height: 95%;
+}
+
+.companentsMainCon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(188, 186, 186); 
+}
+
+/* TAB */
+@media only screen and (min-width: 801px) and (max-width: 1280px) {
+
+}
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+  .App {
+    background: #010C15;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .companentsMainCon{
+    width: 100%;
+    height: 80%;
+  }
+
+  .appInnerContainer{
+    width: 95%;
+    height: 95%;
+    padding-bottom: 0px;
+  }
+
+}
+
+

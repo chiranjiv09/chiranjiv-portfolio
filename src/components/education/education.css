@@ -1,0 +1,130 @@
+.educationMainCon{
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 30px;
+    position: relative;
+    z-index: 1;
+    height: calc(100vh - 200px);
+}
+
+.educationEacgSectionCon{
+    border-bottom: 1px solid #1E2D3D;
+    padding: 20px;
+    padding-left: 30px;
+}
+
+.educationCount{
+    color: #607B96;
+    font-family: "Fira Code";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.schooling{
+    color: #FFF;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap:8px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+.collegeName{
+    color: #43D9AD;
+    font-family: Manrope;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.branchName{
+    color: #DEDEDE;
+    font-family: Manrope;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.passedOutDate{
+    color: #607B96;
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%; /* 27px */
+}
+
+/* TAB */
+@media only screen and (min-width: 801px) and (max-width: 1280px) {
+    .educationEacgSectionCon{
+        padding: 15px;
+        padding-left: 30px;
+    }
+    
+    .educationCount{
+        font-size: 16px;
+    }
+    
+    .schooling{
+        font-size: 14px;
+        gap:6px;
+        margin-top: 14px;
+        margin-bottom: 6px;
+    }
+    
+    .collegeName{
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+    
+    .branchName{
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    
+    .passedOutDate{
+        font-size: 18px;
+        line-height: 150%;
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+    .educationEacgSectionCon{
+        padding: 10px;
+        padding-left: 20px;
+    }
+    
+    .educationCount{
+        font-size: 12px;
+    }
+    
+    .schooling{
+        font-size: 14px;
+        gap:4px;
+        margin-top: 10px;
+        margin-bottom: 6px;
+    }
+    
+    .collegeName{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    .branchName{
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+    
+    .passedOutDate{
+        font-size: 12px;
+        line-height: 150%;
+    }
+
+    .educationMainCon{
+        top:40px;
+    }
+}

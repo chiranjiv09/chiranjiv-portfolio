@@ -1,0 +1,253 @@
+.allDetailsBlockMainCon{
+    display:flex;
+    width: 100%;
+    border-top: 1px solid #1E2D3D;
+    margin-top: 55px;
+    height: 90%;
+}
+
+
+.allDetailsSideBar{
+    min-width: 300px;
+    border-right: 1px solid #1E2D3D;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - 150px);
+}
+
+
+.allDetailsRightSideHeaderCon{
+    display: flex;
+    width: 100%;
+}
+
+.sideEachDropdownCon{
+    width: 300px; 
+    border: none;
+    border-bottom: 1px solid #1E2D3D;
+    height: 53px;
+    color: #607B96;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    padding-left: 23px;
+    padding-right: 10px;
+    background-color: transparent;
+    gap:11px;
+    cursor: pointer;
+}
+
+.selectedsideEachDropdownCon{
+    color: #fff;
+}
+
+.dropdownArrow svg{
+    width: 8.5px;
+    height: 6px;
+    transition-duration:0.5s;
+}
+
+.selectedArrow svg{
+    transform: rotate(180deg);
+}
+
+.selectedArrow svg path{
+    fill: #fff;
+}
+
+.headerSectionNamesCon{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    color: #607B96;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 400;
+    gap: 10px;
+    padding: 12px;
+    border-right: 1px solid #1E2D3D;
+    border-bottom: 1px solid #1E2D3D;
+    cursor: pointer;
+}
+
+.headerSectionNamesHoldingCon{
+    padding-right: 30px;
+}
+
+.sectionBtnCross svg{
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.headerSectionNamesCon:hover{
+    .sectionBtnCross svg path{
+        fill: #fff;
+    }
+}
+
+.allDetailsRightSideCon,
+.slectedSectionMainCon{
+    width: 100%;
+}
+
+.slectedSectionMainCon{
+    transition-duration:0.5s;
+    position: relative;
+}
+
+.sideEachDropdownBottomFoldersCon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid #1E2D3D;
+    position: relative;
+}
+
+.showingComapnysCon{
+    margin-left:36px;
+}
+
+.nxtCompanyIcon{
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+}
+
+.mainFolderHeading{
+    width: 100%;
+    border-bottom: none;
+    color: #fff;
+    flex-direction: row-reverse;
+    display: flex;
+    margin-left: 0;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.showingComapny{
+    display: flex;
+    align-items: center;
+    color: #607B96;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 400;
+    gap:8px;
+    margin-bottom:13px;
+    cursor: pointer !important;
+}
+
+.folderIcon {
+    margin-right: 4px;
+}
+
+.selectedFolderIcon svg path{
+    fill: #EA2D2E;
+}
+
+/* TAB */
+@media only screen and (min-width: 801px) and (max-width: 1280px) {
+    .allDetailsBlockMainCon{
+        margin-top: 39px;
+    }
+
+    .allDetailsSideBar{
+        min-width: 200px;
+        border-right: 1px solid #1E2D3D;
+    }
+
+    .sideEachDropdownCon{
+        height: 40px;
+        padding-left: 12px;
+        width: 170px;
+        font-size: 14px;
+    }
+
+    .headerSectionNamesCon{
+        height: 40px;
+        font-size: 14px;
+        gap: 7px;
+        padding: 8px;
+    }
+
+    .sectionBtnCross svg{
+        width: 10px;
+        height: 10px;
+    }
+
+    .showingComapny{
+        font-size: 14px;
+        gap:8px;
+    }
+
+    .showingComapnysCon{
+        margin-left:20px;
+        max-width: 180px;
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+    .allDetailsBlockMainCon{
+        margin-top: 0px;
+        flex-direction: column;
+    }
+
+    .allDetailsSideBar{
+        min-width: auto;
+        border-right: 1px solid #1E2D3D;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        height: auto;
+        width: 100%;
+    }
+
+    .sideEachDropdownCon{
+        height: 40px;
+        padding-left: 12px;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .headerSectionNamesCon{
+        height: 40px;
+        font-size: 14px;
+        gap: 7px;
+        padding: 8px;
+    }
+
+    .sectionBtnCross svg{
+        width: 10px;
+        height: 10px;
+    }
+
+    .showingComapny{
+        font-size: 14px;
+        gap:8px;
+    }
+
+    .allDetailsRightSideHeaderCon,
+    .forMobile{
+        display: none;
+    }
+
+    .showingComapnysCon{
+        margin-left:0px;
+        max-width: auto;
+        width: 100%;
+        border-radius: 0px;
+        border: 1px solid #1E2D3D;
+        background: #011627;
+        padding: 13px;
+    }
+
+    .sideEachDropdownBottomFoldersCon{
+        z-index: 2;
+        position: absolute; 
+    }
+
+}
