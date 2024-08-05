@@ -44,7 +44,7 @@
     color: #FFF;
 
     .eachSkillsBtnHrLine{
-        width: 100px !important;
+        /* width: 110px !important; */
         transition-duration:0.2s;
         border-color: #FFF;
     }
@@ -142,6 +142,26 @@
     width: 45%;
 }
 
+/* .eachSkillsBtn:hover {    
+    .eachSkillsBtnHrLine{
+        width: 110px !important;
+    }
+} */
+
+
+.selectedEachSkillsBtn{
+    color:white;    
+}
+
+.selectedEachSkillsBtn svg path{
+    fill:white;    
+}
+
+.selectedEachSkillsBtn hr{
+    width: 110px !important;
+}
+
+
 
 /* TAB */
 @media only screen and (min-width: 801px) and (max-width: 1280px) {
@@ -199,11 +219,11 @@
         margin-right: 6px;
     }
     
-    .eachSkillsBtn:hover {    
+    /* .eachSkillsBtn:hover {    
         .eachSkillsBtnHrLine{
             width: 80px !important;
         }
-    }
+    } */
 }
 
 
@@ -263,11 +283,12 @@
         margin-right: 6px;
     }
     
-    .eachSkillsBtn:hover {    
+    /* .eachSkillsBtn:hover {    
         .eachSkillsBtnHrLine{
             width: 80px !important;
         }
-    }
+    } */
+
 
     .skillsMainCon{
         width: 100%;

@@ -2,7 +2,7 @@ import React from 'react';
 import './expereince.css';
 import { companyDetails } from '../../data';
 
-const Expereince = ({}) => {
+const Expereince = () => {
 
     return (
         <div className="expereinceMainCon">

@@ -8,10 +8,13 @@ import linkdinImg from '../../images/linkdin.png';
 import Button from '../../commonElements/Button';
 import { fileIcon } from '../../icons';
 import { basicDetails } from '../../data';
+import ResumePopup from './ResumePopup';
 
 const Home = () => {
     const texts = basicDetails.workingRoles;
     const [currentText, setCurrentText] = useState(texts[0]);
+    const [isResumeOpen, setIsResumeOpen] = useState(false);
+
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -24,6 +27,9 @@ const Home = () => {
 
     return (
         <div className="homeMianCon">
+
+            {isResumeOpen && <ResumePopup setIsResumeOpen={setIsResumeOpen} />}
+
             <div className="homeLeftSideCon">
                 <span className="leftSideSpan">Hi all. I am</span>
                 <h2 className="leftSideUsername line-1 anim-typewriter">{basicDetails.name}</h2>
@@ -39,7 +45,7 @@ const Home = () => {
                     key="Resume"
                     buttonId ="Resume"
                     buttonClassName="resumeBtn"
-                    onSubmit={()=>("")}
+                    onSubmit={()=>setIsResumeOpen(true)}
                     title="Resume"
                     name="Resume"
                     value={0}

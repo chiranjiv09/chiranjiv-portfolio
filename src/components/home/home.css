@@ -291,6 +291,35 @@
   to{border-right-color: transparent;}
 }
 
+.resumePopupinnerPopupCon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    height: 100% !important;
+    padding-top: 10px !important;
+}
+
+.resumePopupHeading{
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1.12px;
+}
+
+.resumeContainer {
+    width: 100%;
+    height: 100%;
+    margin-top:10px;
+}
+
+.resumeFrame{
+    width: 100%;
+    height: 100%;
+}
+
 
 
 /* TAB */

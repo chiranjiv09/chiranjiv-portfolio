@@ -6,14 +6,14 @@ import { companyIcon, CompanyIconEl } from '../../icons';
 export default function Skills({onSelectBlock, selectedOne}) {
     const [allSkills, setAllSkills ] = useState(skillsDetails.map(each=>each.name));
 
-    useEffect(()=>{
-        let index = allSkills.indexOf(selectedOne);
-        let partOne = allSkills.slice(index, allSkills.length);
-        let partTwo = allSkills.slice(0, index);
+    // useEffect(()=>{
+    //     let index = allSkills.indexOf(selectedOne);
+    //     let partOne = allSkills.slice(index, allSkills.length);
+    //     let partTwo = allSkills.slice(0, index);
 
-        partOne.push(...partTwo);
-        setAllSkills(partOne);
-    },[selectedOne]);
+    //     partOne.push(...partTwo);
+    //     setAllSkills(partOne);
+    // },[selectedOne]);
 
     return (
         <div className="skillsMainCon">
@@ -21,15 +21,14 @@ export default function Skills({onSelectBlock, selectedOne}) {
                 <h3 className='skillsSelectedHeading'>{companyIcon} {selectedOne}</h3>
                 <div className="skillsNamesDisplayCon">
                     {allSkills.map((eachOne, index)=>{
-                        if(selectedOne != eachOne){
                         return (
-                            <p className="eachSkillsBtn" key={`skills_${index}`} onClick={()=>onSelectBlock(eachOne, "skill")}>
+                            <p className={`eachSkillsBtn ${selectedOne == eachOne ? "selectedEachSkillsBtn" : ''}`} key={`skills_${index}`} onClick={()=>onSelectBlock(eachOne, "skill")}>
                                 <hr className='eachSkillsBtnHrLine' />
                                 <CompanyIconEl className="companyIconEl" />
                                 {eachOne}
                             </p>
                             )
-                        }
+                        
                     })}
                 </div>
             </div>

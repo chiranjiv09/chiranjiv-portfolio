@@ -53,6 +53,10 @@ import mySQL from './images/mysql.png';
 import sts from './images/sts.png';
 import postman from './images/postman.jpg';
 
+import vertex from './images/vertex.png';
+import reventure from './images/reventure.png';
+import rpclan from './images/rpclan.png';
+
 
 
 export const basicDetails = {
@@ -61,19 +65,19 @@ export const basicDetails = {
     profileImage: null,
     workingRoles: ['Software', 'Web', 'Java Full-Stack'],
     careerObjective:"A passionate Software Developer, I thrive on learning and building innovative solutions. I specialize in infrastructure, containerization, and Serverless/Cloud technologies, driven by a love for programming and community contribution.",
-    resume:null,
+    resume:"https://chiranjiv-personal.s3.ap-south-1.amazonaws.com/Chiranjiv_Kushwah_Resume.pdf",
     mobile:"8962311939",
     email:"kushwahjick@gmail.com",
-    github:"",
-    linkedin:"",
-    leetcode:"",
+    github:"https://github.com/chiranjiv09",
+    linkedin:"https://www.linkedin.com/in/chiranjiv-kushwah-8333b2201/",
+    leetcode:"https://leetcode.com/u/kushwahjick/",
 
 }
 
 export const companyDetails = [
     {
         name: "RP CLAN",
-        logo:"",
+        logo: rpclan,
         joinDate: "Dec 2022- May 2023",
         role: "SOFTWARE  DEVELOPER",
         keyPoints:[
@@ -86,7 +90,7 @@ export const companyDetails = [
     },
     {
         name: "Revature",
-        logo:"",
+        logo: reventure,
         joinDate: "Dec 2022- May 2023",
         role: "JAVA FULL STACK DEVELOPER",
         keyPoints:[
@@ -100,7 +104,7 @@ export const companyDetails = [
     },
     {
         name: "Skill Vertex",
-        logo:"",
+        logo: vertex,
         joinDate: "Dec 2022- May 2023",
         role: "WEB  DEVELOPER",
         keyPoints:[
@@ -445,4 +449,9 @@ export const profileDetails = [
     {
         name :"Education",
     },
-]
+];
+
+export const onRedirectTo = (url) => {
+    window.open(url, "_blank", "noreferrer");
+}
+

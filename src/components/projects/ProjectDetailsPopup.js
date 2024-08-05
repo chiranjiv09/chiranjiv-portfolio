@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import ReactPlayer from 'react-player'
+// import ReactPlayer from 'react-player'
 
 import Button from '../../commonElements/Button';
 import projectPosterImg from '../../images/projectPoster.jpg';
@@ -29,6 +29,7 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
   return (
     <div className="projectPopupStaticCon" onClick={(e)=>onMainConClick(e)} >
         <div className="projectPopupinnerPopupCon" id='innerContainer'>
+            <p></p>
             {/* Right side card con */}
             <div className="projectPopupLeftCon">
                 <p className="projectCount">Project {index+1}</p>

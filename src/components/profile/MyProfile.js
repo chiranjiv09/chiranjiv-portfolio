@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CompanyIconEl, fileIcon, ginIcon, linkdinIcon } from '../../icons'
 import Button from '../../commonElements/Button'
+import { basicDetails, onRedirectTo } from '../../data'
 
-export default function MyProfile() {
+export default function MyProfile({setIsResumeOpen}) {
+
     return (
         <div className="profileEachBlock" id={`${"About Me"}_block`}>
+
             <p className="eachSkillsBtn" >
                 <hr className='eachSkillsBtnHrLine' />
                 <CompanyIconEl className="companyIconEl" />
@@ -18,7 +21,7 @@ export default function MyProfile() {
                     key="Resume"
                     buttonId ="Resume"
                     buttonClassName="resumeBtn"
-                    onSubmit={()=>("")}
+                    onSubmit={()=>setIsResumeOpen(true)}
                     title="Download Resume"
                     name="Resume"
                     value={0}
@@ -29,7 +32,7 @@ export default function MyProfile() {
                     key="Resume"
                     buttonId ="Resume"
                     buttonClassName="resumeBtn profileIconBtns"
-                    onSubmit={()=>("")}
+                    onSubmit={()=>onRedirectTo(basicDetails.linkedin)}
                     title=""
                     name=""
                     value={0}
@@ -40,7 +43,7 @@ export default function MyProfile() {
                     key="Resume"
                     buttonId ="Resume"
                     buttonClassName="resumeBtn profileIconBtns"
-                    onSubmit={()=>("")}
+                    onSubmit={()=>onRedirectTo(basicDetails.github)}
                     title=""
                     name=""
                     value={0}
