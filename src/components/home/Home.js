@@ -76,26 +76,26 @@ const Home = () => {
             </div>
 
             <div className="siderIconsConForMobile">
-                    <p>Follow me</p>
+                <p>Follow me</p>
 
-                    <div className="iconHoldingConForMobile">
-                        <div className="iconHoldingCon">
-                            <img className='rightSideSocialIcons' src={emailImg} alt="" />
-                        </div>
+                <div className="iconHoldingConForMobile">
+                    <div className="iconHoldingCon">
+                        <img className='rightSideSocialIcons' src={emailImg} alt="" />
+                    </div>
 
-                        <div className="iconHoldingCon">
-                            <img className='rightSideSocialIcons' src={githubImg} alt="" />
-                        </div>
+                    <div className="iconHoldingCon">
+                        <img className='rightSideSocialIcons' src={githubImg} alt="" />
+                    </div>
 
-                        <div className="iconHoldingCon">
-                            <img className='rightSideSocialIcons' src={leetcodeImg} alt="" />
-                        </div>
+                    <div className="iconHoldingCon">
+                        <img className='rightSideSocialIcons' src={leetcodeImg} alt="" />
+                    </div>
 
-                        <div className="iconHoldingCon">
-                            <img className='rightSideSocialIcons' src={linkdinImg} alt="" />
-                        </div>
+                    <div className="iconHoldingCon">
+                        <img className='rightSideSocialIcons' src={linkdinImg} alt="" />
                     </div>
                 </div>
+            </div>
         </div>
     );
 };

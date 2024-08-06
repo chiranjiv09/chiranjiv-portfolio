@@ -4,7 +4,7 @@ import React, { Fragment, useState } from 'react'
 import Button from '../../commonElements/Button';
 import projectPosterImg from '../../images/projectPoster.jpg';
 import githubImg from '../../images/github.png';
-import { CompanyIconEl, popupCrossIcon } from '../../icons';
+import { backArrowIcon, CompanyIconEl, popupCrossIcon } from '../../icons';
 
 // import video from '../../videos/'
 
@@ -29,7 +29,7 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
   return (
     <div className="projectPopupStaticCon" onClick={(e)=>onMainConClick(e)} >
         <div className="projectPopupinnerPopupCon" id='innerContainer'>
-            <p></p>
+            <div className='popupBackBtn' onClick={()=>onPopupClick("CLOSE")}>{backArrowIcon} Back</div>
             {/* Right side card con */}
             <div className="projectPopupLeftCon">
                 <p className="projectCount">Project {index+1}</p>
@@ -45,6 +45,21 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
                             })}
                         </div>
                     </div>
+
+                    <Button
+                        key="project_btn_2"
+                        buttonId ="project_btn_2"
+                        buttonConClassName="projectBtnCon"
+                        buttonClassName="projectBtn popupInnerProjectBtnTwo"
+                        onSubmit={(e)=>("")}
+                        title="view-project"
+                    />
+
+                    <p className="projectPopupHeaderContent popupGitBoxMobile">
+                      <img className='projectPopupGitIcon' src={githubImg} alt="" />
+                      _Git link:
+                      <span>{` https://{userid}.github.io/{reponame}`}</span>
+                    </p>
 
                     <div className="innerProjectCardTechUsed">
                         <span>
@@ -63,7 +78,7 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
                         key="project_btn_1"
                         buttonId ="project_btn_1"
                         buttonConClassName="projectBtnCon"
-                        buttonClassName="projectBtn"
+                        buttonClassName="projectBtn popupInnerProjectBtnOne"
                         onSubmit={(e)=>("")}
                         title="view-project"
                     />

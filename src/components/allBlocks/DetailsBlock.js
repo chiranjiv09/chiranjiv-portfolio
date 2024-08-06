@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import './allDetailsBlock.css';
-import { arrowIcon, companyIcon, crossIcon, folderIcon, redFolderIcon, singleLineArrowIcon } from '../../icons';
+import { arrowIcon, crossIcon, folderIcon } from '../../icons';
 import Button from '../../commonElements/Button';
 import Expereince from '../expereince/Expereince';
 import { companyDetails, educationDetails, projectDetails, skillsDetails, srollIntoView, profileDetails } from '../../data';
@@ -9,6 +9,7 @@ import DetailsFolder from '../../commonElements/DetailsFolder';
 import Skills from '../skills/Skills';
 import Projects from '../projects/Projects';
 import Profile from '../profile/Profile';
+import Contact from '../contact/Contact';
 
 const DetailsBlock = ({block, onSelect, selectedSections}) => {
     const [folderBlock, setFolderBlock ] = useState({
@@ -16,8 +17,8 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
     });
 
     const [selectedItem, setSelectedItem] = useState({
-        company: companyDetails[0].name, 
-        school: educationDetails[0].name,
+        experience: companyDetails[0].name, 
+        education: educationDetails[0].name,
         skill: skillsDetails[0].name,
         project: projectDetails[0].name,
         profile: profileDetails[0].name
@@ -83,7 +84,7 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                     keyName="experience"
                     onFunctionCall={onSelectBlock}
                     data={companyDetails}
-                    section="company"
+                    section="experience"
                     folderBlock={folderBlock}
                     selectedItem={selectedItem}
                 />
@@ -132,7 +133,7 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                     keyName="education"
                     onFunctionCall={onSelectBlock}
                     data={educationDetails}
-                    section="school"
+                    section="education"
                     folderBlock={folderBlock}
                     selectedItem={selectedItem}
                 />
@@ -248,6 +249,8 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                         selectedOne={selectedItem.profile}
                     />
                     }
+
+                    {block == "Contact-me" && <Contact />}
                 </div>
 
             </div>
