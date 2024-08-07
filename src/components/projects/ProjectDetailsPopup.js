@@ -5,6 +5,7 @@ import Button from '../../commonElements/Button';
 import projectPosterImg from '../../images/projectPoster.jpg';
 import githubImg from '../../images/github.png';
 import { backArrowIcon, CompanyIconEl, popupCrossIcon } from '../../icons';
+import { basicDetails, onRedirectTo } from '../../data';
 
 // import video from '../../videos/'
 
@@ -55,11 +56,13 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
                         title="view-project"
                     />
 
-                    <p className="projectPopupHeaderContent popupGitBoxMobile">
-                      <img className='projectPopupGitIcon' src={githubImg} alt="" />
-                      _Git link:
-                      <span>{` https://{userid}.github.io/{reponame}`}</span>
-                    </p>
+                    <div onClick={()=>onRedirectTo(basicDetails.github)} className="projectPopupHeaderContent popupGitBoxMobile">
+                        <div>
+                            <img className='projectPopupGitIcon' src={githubImg} alt="" />
+                            _Git link:
+                        </div>
+                        <span>{` https://{userid}.github.io/{reponame}`}</span>
+                    </div>
 
                     <div className="innerProjectCardTechUsed">
                         <span>
@@ -90,7 +93,7 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
 
             <div className="projectPopuprightCon">
                 <div className="projectPopupHeaderCon">
-                    <p className="projectPopupHeaderContent">
+                    <p onClick={()=>onRedirectTo(basicDetails.github)} className="projectPopupHeaderContent">
                       <img className='projectPopupGitIcon' src={githubImg} alt="" />
                       _Git link:
                       <span>{` https://{userid}.github.io/{reponame}`}</span>

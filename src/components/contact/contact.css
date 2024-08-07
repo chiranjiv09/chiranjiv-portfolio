@@ -14,6 +14,10 @@
     padding: 4%;
 }
 
+.ContactRightContainer{
+    padding-right: 10px;
+}
+
 .ContactLeftContainer{
     border-right: 1px solid #1E2D3D;
 }
@@ -42,7 +46,6 @@
     background: #011221;
     height: 41px;
     width: 100%;
-
     color: #FFF;
     font-family: Outfit;
     font-size: 16px;
@@ -68,6 +71,7 @@
     font-weight: 500;
     margin: 0;
     padding: 0;
+    text-align: left;
 }
 
 .contactMeSubHeading{
@@ -75,7 +79,6 @@
     font-family: Outfit;
     font-size: 20px;
     font-weight: 500;
-    margin-left: 14px;
     margin-top: 13px;
     margin-bottom: 4px;
 }
@@ -87,6 +90,7 @@
     align-items:center;
     gap: 15px;
     padding: 16px;
+    padding-left: 0;
 }
 
 .iconHoldingContact{
@@ -121,8 +125,139 @@
     cursor: pointer;
 }
 
+textarea:focus,
+input:focus{
+    outline: none;
+}
+
+.iconHoldingCon{
+    border-radius: 7px;
+    background: #F3F8FF;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
 .rightSideSocialIcons svg,
 .rightSideSocialIcons{
     width: 28px;
     height: 28px;
+    flex-shrink: 0;
+}
+
+.errorMessage{
+    color: #F00;
+    font-family: Outfit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+/* TAB */
+@media only screen and (min-width: 801px) and (max-width: 1280px) {
+    .contectFollowMeeBlock p{
+        font-size: 14px;
+    }
+
+    .inputLable {
+        font-size: 16px;
+    }
+
+    .inputField{
+        font-size: 14px;
+    }
+
+    .contactMeHeading{
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .contactMeSubHeading{
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: 13px;
+        margin-bottom: 4px;
+    }
+
+    .iconHoldingCon{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .rightSideSocialIcons svg,
+    .rightSideSocialIcons{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+    .ContactMinContainer{
+        flex-direction: column;
+    }
+
+    .ContactRightContainer,
+    .ContactLeftContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 20px;
+    }
+
+    
+    .contactMeHeading{
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .contactMeSubHeading{
+        font-size: 14px;
+        margin-left: 0px;
+        margin-top: 13px;
+        margin-bottom: 4px;
+    }
+
+    .contectFollowMeeBlock{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items:center;
+        gap: 15px;
+        padding: 16px;
+        padding-left: 0;
+    }
+
+    .contectFollowMeeBlock p{
+        font-size: 12px;
+    }
+
+    .inputLable {
+        font-size: 14px;
+    }
+
+    .inputField{
+        font-size: 12px;
+    }
+
+    .iconHoldingCon{
+        border-radius: 4px;
+        width: 23px;
+        height: 23px;
+    }
+    
+    .rightSideSocialIcons svg,
+    .rightSideSocialIcons{
+        width: 13.225px;
+        height: 13.225px;
+    }
+
 }

@@ -7,7 +7,7 @@ import leetcodeImg from '../../images/leetcode.png';
 import linkdinImg from '../../images/linkdin.png';
 import Button from '../../commonElements/Button';
 import { fileIcon } from '../../icons';
-import { basicDetails } from '../../data';
+import { basicDetails, onRedirectTo } from '../../data';
 import ResumePopup from './ResumePopup';
 
 const Home = () => {
@@ -62,15 +62,15 @@ const Home = () => {
                     </div>
 
                     <div className="iconHoldingCon">
-                        <img className='rightSideSocialIcons' src={githubImg} alt="" />
+                        <img onClick={()=>onRedirectTo(basicDetails.github)} className='rightSideSocialIcons' src={githubImg} alt="" />
                     </div>
 
                     <div className="iconHoldingCon">
-                        <img className='rightSideSocialIcons' src={leetcodeImg} alt="" />
+                        <img onClick={()=>onRedirectTo(basicDetails.leetcode)} className='rightSideSocialIcons' src={leetcodeImg} alt="" />
                     </div>
 
                     <div className="iconHoldingCon">
-                        <img className='rightSideSocialIcons' src={linkdinImg} alt="" />
+                        <img onClick={()=>onRedirectTo(basicDetails.linkedin)} className='rightSideSocialIcons' src={linkdinImg} alt="" />
                     </div>
                 </div>
             </div>
@@ -84,15 +84,15 @@ const Home = () => {
                     </div>
 
                     <div className="iconHoldingCon">
-                        <img className='rightSideSocialIcons' src={githubImg} alt="" />
+                        <img onClick={()=>onRedirectTo(basicDetails.github)} className='rightSideSocialIcons' src={githubImg} alt="" />
                     </div>
 
                     <div className="iconHoldingCon">
-                        <img className='rightSideSocialIcons' src={leetcodeImg} alt="" />
+                        <img onClick={()=>onRedirectTo(basicDetails.leetcode)} className='rightSideSocialIcons' src={leetcodeImg} alt="" />
                     </div>
 
                     <div className="iconHoldingCon">
-                        <img className='rightSideSocialIcons' src={linkdinImg} alt="" />
+                        <img onClick={()=>onRedirectTo(basicDetails.linkedin)} className='rightSideSocialIcons' src={linkdinImg} alt="" />
                     </div>
                 </div>
             </div>

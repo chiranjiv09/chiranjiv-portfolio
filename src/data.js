@@ -452,6 +452,13 @@ export const profileDetails = [
 ];
 
 export const onRedirectTo = (url) => {
-    window.open(url, "_blank", "noreferrer");
+    // window.open(url, "_blank", "noreferrer");
+
+    let a= document.createElement('a');
+    a.target= '_blank';
+    a.href= url;
+    a.click();
+
+    // window.location.href = url;
 }
 
