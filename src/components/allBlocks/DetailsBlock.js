@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import './allDetailsBlock.css';
-import { arrowIcon, crossIcon, folderIcon } from '../../icons';
+import { arrowIcon, BackgroundBottomSvg, BackgroundTopSvg, crossIcon, folderIcon } from '../../icons';
 import Button from '../../commonElements/Button';
 import Expereince from '../expereince/Expereince';
 import { companyDetails, educationDetails, projectDetails, skillsDetails, srollIntoView, profileDetails } from '../../data';
@@ -52,6 +52,7 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
     
     return (
         <div className="allDetailsBlockMainCon">
+{/* Side bar */}
             <div className="allDetailsSideBar">
                 <Button
                     key="_hello_dropwon"
@@ -200,8 +201,8 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                     icon={<span className={`dropdownArrow ${block == "Contact-me" ? "selectedArrow" : ""}`}>{arrowIcon}</span>}
                 />
             </div>
-            <div className="allDetailsRightSideCon">
 
+            <div className="allDetailsRightSideCon">
 {/* Selected Items Header */}
                 <div className="allDetailsRightSideHeaderCon">
                     {selectedSections && selectedSections.length > 0 && 
@@ -225,28 +226,52 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
 
 {/* Selected Section Display Container */}
                 <div className='slectedSectionMainCon'>
+
+                    <BackgroundTopSvg className="backgroundTopSvg" />
+                    <BackgroundBottomSvg className="backgroundBottomSvg"  />
+
                     {block == "Experience" &&
                     <Fragment>
                         <hr className="hrLineInCenter" />
-                        <Expereince  />
+                        <Expereince 
+                            onSelectBlock={onSelectBlock}
+                            folderBlock={folderBlock}
+                            selectedItem={selectedItem} 
+                        />
                     </Fragment>
                     }
 
-                    {block == "Education" && <Education /> }
+                    {block == "Education" && 
+                    <Education 
+                        onSelectBlock={onSelectBlock}
+                        folderBlock={folderBlock}
+                        selectedItem={selectedItem} 
+                    /> 
+                    }
                     
                     {block == "Skill" &&
                     <Skills 
                         onSelectBlock={onSelectBlock}
                         selectedOne={selectedItem.skill}
+                        folderBlock={folderBlock}
+                        selectedItem={selectedItem}
                     />
                     }
 
-                    {block == "Projects" && <Projects /> }
+                    {block == "Projects" && 
+                    <Projects 
+                        onSelectBlock={onSelectBlock}
+                        folderBlock={folderBlock}
+                        selectedItem={selectedItem} 
+                    /> 
+                    }
 
                     {block == "Profile" &&
                     <Profile
                         onSelectBlock={onSelectBlock}
                         selectedOne={selectedItem.profile}
+                        folderBlock={folderBlock}
+                        selectedItem={selectedItem} 
                     />
                     }
 

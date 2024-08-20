@@ -3,10 +3,11 @@ import './home.css';
 
 import emailImg from '../../images/email.png';
 import githubImg from '../../images/github.png';
-import leetcodeImg from '../../images/leetcode.png';
 import linkdinImg from '../../images/linkdin.png';
 import leetcodeGrayImg from '../../images/leetcodeGray.png';
-import { basicDetails, onRedirectTo } from '../../data';
+import watsappImg from '../../images/whatsapp.png';
+
+import { basicDetails, mailtoHref, onRedirectTo, watsappToHref } from '../../data';
 
 const Footer = () => {
     return (
@@ -21,7 +22,12 @@ const Footer = () => {
             <div className="footerIconHoldingCon">
                 <img onClick={()=>onRedirectTo(basicDetails.leetcode)} className='footerSocialIcons' src={leetcodeGrayImg} alt="" />
             </div>
-            <div className="footerFindMeText footerCornerEmailBox">
+
+            <div className="footerIconHoldingCon">
+                <img onClick={()=>onRedirectTo(watsappToHref)} className='footerSocialIcons' src={watsappImg} alt="" />
+            </div>
+
+            <div onClick={()=>onRedirectTo(mailtoHref)} className="footerFindMeText footerCornerEmailBox">
                 {basicDetails.email}
                 <img src={emailImg} alt="" />
             </div>

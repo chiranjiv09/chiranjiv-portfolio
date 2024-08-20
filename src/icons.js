@@ -90,3 +90,35 @@ export const watsappIcon =
     </clipPath>
   </defs>
 </svg>
+
+export const BackgroundTopSvg = ({className}) => {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="864" height="770" viewBox="0 0 864 770" fill="none">
+      <g opacity="0.2" filter="url(#filter0_f_4473_128403)">
+        <path d="M673.469 244.482L689.984 463.861L655.759 568.726L485.295 595.598L413.003 434.57L297.588 473.343L184.059 297.369L174 163.747L452.567 160.828L523.099 271.847L673.469 244.482Z" fill="#43D9AD"/>
+      </g>
+      <defs>
+        <filter id="filter0_f_4473_128403" x="0" y="-13.1719" width="863.983" height="782.77" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_4473_128403"/>
+        </filter>
+      </defs>
+</svg>
+)}
+
+export const BackgroundBottomSvg = ({className}) => {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="812" height="790" viewBox="0 0 812 790" fill="none">
+      <g opacity="0.2" filter="url(#filter0_f_4473_128402)">
+        <path d="M477.946 656.519L264.032 605.132L174.663 540.469L201.226 369.957L376.649 350.391L375.041 228.647L577.309 174.392L707.602 205.691L625.165 471.797L497.892 504.987L477.946 656.519Z" fill="#4D5BCE"/>
+      </g>
+      <defs>
+        <filter id="filter0_f_4473_128402" x="0.663574" y="0.391602" width="880.938" height="830.128" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_4473_128402"/>
+        </filter>
+      </defs>
+    </svg>
+)}

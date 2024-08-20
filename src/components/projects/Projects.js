@@ -4,8 +4,10 @@ import projectPosterImg from '../../images/projectPoster.jpg';
 import './projects.css';
 import { projectDetails } from '../../data';
 import ProjectDetailsPopup from './ProjectDetailsPopup';
+import DetailsFolder from '../../commonElements/DetailsFolder';
+import { arrowIcon } from '../../icons';
 
-export default function Projects() {
+export default function Projects({onSelectBlock, selectedItem, folderBlock}) {
   const [popupData, setPopupData ] = useState({isPopup: false});
 
   const onPopupClick = (identifier, data, index) => {
@@ -32,6 +34,20 @@ export default function Projects() {
             popupData={popupData}
         />
         }
+
+        <div className='topFolderConForMobile'>
+            <p className='sideEachDropdownCon selectedsideEachDropdownCon'>{arrowIcon} _projects</p>
+            <DetailsFolder 
+                key="ProjectsFolder"
+                title="Projects"
+                keyName="project"
+                onFunctionCall={onSelectBlock}
+                data={projectDetails}
+                section="project"
+                folderBlock={folderBlock}
+                selectedItem={selectedItem}
+            />
+        </div>
 
         {projectDetails.map((eachCrad, index)=>{
             return(

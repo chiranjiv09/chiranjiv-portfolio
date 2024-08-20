@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { basicDetails, profileDetails } from '../../data';
 import '../skills/skills.css';
 import './profile.css';
-import { CompanyIconEl } from '../../icons';
+import { arrowIcon, CompanyIconEl } from '../../icons';
 import MyProfile from './MyProfile';
 import MyExperince from './MyExperince';
 import MySkills from './MySkills';
 import MyProjects from './MyProjects';
 import MyEducation from './MyEducation';
 import ResumePopup from '../home/ResumePopup';
+import DetailsFolder from '../../commonElements/DetailsFolder';
 
-export default function Profile({onSelectBlock, selectedOne}) {
+export default function Profile({onSelectBlock, selectedOne, folderBlock, selectedItem}) {
     const [allNames, setAllNames ] = useState(profileDetails.map(each=>each.name));
     const [isResumeOpen, setIsResumeOpen] = useState(false);
 
@@ -41,15 +42,31 @@ export default function Profile({onSelectBlock, selectedOne}) {
                 </div>
             </div>
 
-            <div className="profileRightSideCon">
-                {isResumeOpen && <ResumePopup setIsResumeOpen={setIsResumeOpen} />}
+            <Fragment>
+                <div className='topFolderConForMobile'>
+                    <p className='sideEachDropdownCon selectedsideEachDropdownCon'>{arrowIcon} _profile</p>
+                    <DetailsFolder 
+                        key="ProfileFolder"
+                        title="profile"
+                        keyName="profile"
+                        onFunctionCall={onSelectBlock}
+                        data={profileDetails}
+                        section="profile"
+                        folderBlock={folderBlock}
+                        selectedItem={selectedItem}
+                    />
+                </div>
 
-                <MyProfile setIsResumeOpen={setIsResumeOpen} />
-                <MyExperince />
-                <MySkills />
-                <MyProjects />
-                <MyEducation />
-            </div>
+                <div className="profileRightSideCon">
+                    {isResumeOpen && <ResumePopup setIsResumeOpen={setIsResumeOpen} />}
+
+                    <MyProfile setIsResumeOpen={setIsResumeOpen} />
+                    <MyExperince />
+                    <MySkills />
+                    <MyProjects />
+                    <MyEducation />
+                </div>
+            </Fragment>
         </div>
     )
 }

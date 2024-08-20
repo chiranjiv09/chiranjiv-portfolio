@@ -6,8 +6,9 @@ import githubImg from '../../images/github.png';
 import leetcodeImg from '../../images/leetcode.png';
 import linkdinImg from '../../images/linkdin.png';
 import Button from '../../commonElements/Button';
-import { watsappIcon } from '../../icons';
-import { basicDetails, onRedirectTo } from '../../data';
+import watsappImg from '../../images/whatsapp.png';
+
+import { basicDetails, mailtoHref, onRedirectTo, watsappToHref } from '../../data';
 
 
 export default function Contact() {
@@ -45,13 +46,17 @@ export default function Contact() {
 
         setError(errors);
 
+        setTimeout(()=>{
+            setError([]);
+        }, 3000);
+
         if(errors.length === 0){
+            // CALL Api Here...
             console.log(data);
         }else{
             console.log("Missing Field: ", errors);
         }
-
-    }
+    };
  
 
     return (
@@ -60,6 +65,7 @@ export default function Contact() {
                 <div className='inputFieldCon'>
                     <label className='inputLable'>_name:</label>
                     <input
+                        required
                         style={{ borderColor: error.includes('name') ? "#F00" : "" }}
                         type="text"
                         onChange={onChange} 
@@ -72,6 +78,7 @@ export default function Contact() {
                 <div className='inputFieldCon'>
                     <label className='inputLable'>_email:</label>
                     <input 
+                        required
                         type="email" 
                         onChange={onChange} 
                         placeholder='Enter Your Email...' 
@@ -84,6 +91,7 @@ export default function Contact() {
                 <div className='inputFieldCon'>
                     <label className='inputLable'>_message:</label>
                     <textarea 
+                        required
                         name="message" 
                         className='inputField textAreaField' 
                         rows={5}
@@ -118,7 +126,7 @@ export default function Contact() {
 
                     <div className="iconHoldingContact">
                         <div className="iconHoldingCon">
-                            <img className='rightSideSocialIcons' src={emailImg} alt="" />
+                            <img onClick={()=>onRedirectTo(mailtoHref)} className='rightSideSocialIcons' src={emailImg} alt="" />
                         </div>
 
                         <div className="iconHoldingCon">
@@ -134,9 +142,7 @@ export default function Contact() {
                         </div>
 
                         <div className="iconHoldingCon">
-                            <span className='rightSideSocialIcons'>
-                                {watsappIcon}
-                            </span>
+                            <img onClick={()=>onRedirectTo(watsappToHref)} className='rightSideSocialIcons' src={watsappImg} alt="" />
                         </div>
                     </div>
                 </div>

@@ -111,7 +111,7 @@
 .skillBox{
     display: flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
     width: 100px;
 }
@@ -135,7 +135,9 @@
     position: sticky;
     top:0;
     height: 100%;
-    height: calc(100vh - 200px);
+    /* height: calc(100vh - 200px); */
+    position: sticky;
+    top:0;
 }
 
 .skillsRightSideCon{
@@ -161,6 +163,9 @@
     width: 110px !important;
 }
 
+.topFolderConForMobile{
+    display: none;
+}
 
 
 /* TAB */
@@ -233,6 +238,15 @@
         font-size: 24px;
         margin-bottom: 8px;
     }
+
+    .topFolderConForMobile{
+        display: block;
+        width: 100%;
+        position: sticky;
+        top:0;
+        background: #011627;
+        z-index: 1;
+    }
     
     .skillsRightContant{
         font-size: 18px;
@@ -242,19 +256,6 @@
     .skillsIconsDisplayBox{
         padding: 12px;
         gap:20px;
-    }
-    
-    .skillBox{
-        width: 70px;
-    }
-    
-    .skillBox img{
-        width: 35px;
-        height: 35px;
-    }
-    
-    .skillBox span{
-        font-size: 14px;
     }
 
     .skillsSelectedHeading{
@@ -297,9 +298,11 @@
         position: relative;
         z-index: 1;
         display: flex;
-        justify-content: space-between;
-        padding: 5%;
-        top:40px;
+        justify-content: flex-start;
+        padding: 0;
+        top:0px;
+        flex-direction: column;
+        height: calc(100vh - 100px);
     }
 
     .skillsLeftSideCon{
@@ -308,6 +311,7 @@
 
     .skillsRightSideCon{
         width: 100%;
+        padding: 5%;
     }
 
     .skillsRightMainHeading{
@@ -320,7 +324,11 @@
     }
 
     .skillBox{
-        width: auto;
+        max-width: 75px;
+    }
+    
+    .skillBox span{
+        font-size: 14px;
     }
     
     .skillBox img{

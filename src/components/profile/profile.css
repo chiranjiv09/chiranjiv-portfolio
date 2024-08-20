@@ -430,6 +430,11 @@
 
     .profileRightSideCon{
         width: 100%;
+        padding: 5%;
+    }
+
+    .profileRightSideCon div{
+        scroll-margin-top: 100px;
     }
 
     .profileExperinceCard{

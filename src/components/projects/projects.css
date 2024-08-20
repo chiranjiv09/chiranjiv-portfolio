@@ -437,6 +437,8 @@
 @media only screen and (max-width: 800px) {
     .projectCard{
         width: 300px;
+        margin-left: 13px;
+        scroll-margin-top: 100px;
     }
     
     .projectCount{
@@ -544,10 +546,11 @@
     }
 
     .projectsMainCon{
-        top:40px;
-        padding: 13px;
-        /* height: 100%; */
+        top:0px;
+        padding: 0px;
+        height: calc(100vh - 100px);
     }
+
 
     .popupBackBtn{
         background: #1E2D3D;

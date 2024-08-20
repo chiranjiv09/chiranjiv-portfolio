@@ -194,7 +194,15 @@
 .rightSideSocialIcons{
     width: 28px;
     height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* .rightSideSocialIcons svg{
+    max-width: 28px;
+    max-height: 28px;
+} */
 
 .footerIconHoldingCon{
     height: 40px;

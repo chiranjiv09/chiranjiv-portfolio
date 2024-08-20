@@ -71,21 +71,32 @@ export const basicDetails = {
     github:"https://github.com/chiranjiv09",
     linkedin:"https://www.linkedin.com/in/chiranjiv-kushwah-8333b2201/",
     leetcode:"https://leetcode.com/u/kushwahjick/",
-
 }
+
+
+const subject = "Hello there!";
+const body = "Just wanted to say hi.";
+
+export const mailtoHref = `mailto:${basicDetails.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+export const watsappToHref = `https://api.whatsapp.com/send?phone=+91${basicDetails.mobile}&text=Hello`;
+
+export const onCallingEmail = (e) => {
+    e.preventDefault();
+    window.location.href = mailtoHref;
+};
 
 export const companyDetails = [
     {
         name: "RP CLAN",
         logo: rpclan,
-        joinDate: "Dec 2022- May 2023",
+        joinDate: "Jun 2023 - Present",
         role: "SOFTWARE  DEVELOPER",
         keyPoints:[
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
+            "Lead the development of two innovative projects, architecting,designing, and implementing robust solutions.",
+            "Utilized Reactjs and Next js for front-end development, creating userfriendly interfaces.",
+            "Employed Java, Spring boot and Hibernate for back-end development, ensuring application robustness and efficiency.",
+            "Leveraged AWS for cloud deployment, optimizing scalability and reliability",
+            "Collaborated with cross-functional teams, delivering seamless user experiences and driving business growth and innovation",
         ],
     },
     {

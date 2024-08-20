@@ -288,8 +288,9 @@
     }
 
     .expereinceMainCon{
-        padding: 10px;
-        top:40px;
+        padding: 0px;
+        top:0px;
+        height: calc(100vh - 100px);
     }
 
     .companyDesc,
@@ -328,6 +329,13 @@
 
     .topCompanyDetailsBox{
         gap: 8px;
+    }
+
+    .expereinceEachBox{
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 95%;
+        scroll-margin-top: 100px;
     }
     
 

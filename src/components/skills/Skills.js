@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import './skills.css';
 import { skillsDetails } from '../../data';
-import { companyIcon, CompanyIconEl } from '../../icons';
+import { arrowIcon, companyIcon, CompanyIconEl } from '../../icons';
+import DetailsFolder from '../../commonElements/DetailsFolder';
 
-export default function Skills({onSelectBlock, selectedOne}) {
+export default function Skills({onSelectBlock, selectedOne, folderBlock, selectedItem}) {
     const [allSkills, setAllSkills ] = useState(skillsDetails.map(each=>each.name));
 
     // useEffect(()=>{
@@ -33,20 +34,36 @@ export default function Skills({onSelectBlock, selectedOne}) {
                 </div>
             </div>
 
-            <div className="skillsRightSideCon">
-                <h3 className='skillsRightMainHeading'>{selectedOne}</h3>
-                <p className="skillsRightContant">{skillsDetails.filter(each=>each.name == selectedOne)[0].content}</p>
-                <div className="skillsIconsDisplayBox">
-                    {skillsDetails.filter(each=>each.name == selectedOne)[0].technologies.map((eachTect, ind)=>{
-                        return(
-                            <div className="skillBox">
-                                <img alt="" src={eachTect.url} />
-                                <span>{eachTect.name}</span>
-                            </div>
-                        )
-                    })}
+            <Fragment>
+                <div className='topFolderConForMobile'>
+                    <p className='sideEachDropdownCon selectedsideEachDropdownCon'>{arrowIcon} _skill</p>
+                    <DetailsFolder
+                        key="skillsFolder"
+                        title="Skills"
+                        keyName="skill"
+                        onFunctionCall={onSelectBlock}
+                        data={skillsDetails}
+                        section="skill"
+                        folderBlock={folderBlock}
+                        selectedItem={selectedItem}
+                    />
                 </div>
-            </div>
+
+                <div className="skillsRightSideCon">
+                    <h3 className='skillsRightMainHeading'>{selectedOne}</h3>
+                    <p className="skillsRightContant">{skillsDetails.filter(each=>each.name == selectedOne)[0].content}</p>
+                    <div className="skillsIconsDisplayBox">
+                        {skillsDetails.filter(each=>each.name == selectedOne)[0].technologies.map((eachTect, ind)=>{
+                            return(
+                                <div className="skillBox">
+                                    <img alt="" src={eachTect.url} />
+                                    <span>{eachTect.name}</span>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+            </Fragment>
         </div>
     )
 }
