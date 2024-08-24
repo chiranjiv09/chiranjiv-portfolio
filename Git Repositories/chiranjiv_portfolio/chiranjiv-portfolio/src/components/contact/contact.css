@@ -1,0 +1,263 @@
+.ContactMinContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContactRightContainer,
+.ContactLeftContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 200px);
+    padding: 4%;
+}
+
+.ContactRightContainer{
+    padding-right: 10px;
+}
+
+.ContactLeftContainer{
+    border-right: 1px solid #1E2D3D;
+}
+
+.inputFieldCon{
+    display: flex;
+    flex-direction: column;
+    max-width: 372px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.inputLable{
+    color: #607B96;
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 11px;
+}
+
+.inputField{
+    border-radius: 4px;
+    border: 1px solid #1E2D3D;
+    background: #011221;
+    height: 41px;
+    width: 100%;
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.textAreaField{
+    max-width: 372px;
+    height: 145px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #607B96;
+    box-shadow: 0px 0px 0px 2px rgba(96, 123, 150, 0.30);
+    resize: none;
+}
+
+.contactMeHeading{
+    color: #FFF;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.contactMeSubHeading{
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 13px;
+    margin-bottom: 4px;
+}
+
+.contectFollowMeeBlock{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items:center;
+    gap: 15px;
+    padding: 16px;
+    padding-left: 0;
+}
+
+.iconHoldingContact{
+    display: flex;
+    gap:10px
+}
+
+.contectFollowMeeBlock p{
+    color: #FFF;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration-color: #FFF;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 5px;
+}
+
+.submitMessageBtn{
+    border-radius: 8px;
+    background: #1C2B3A;
+    color: #FFF;
+    text-align: right;
+    font-family: "Fira Code";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+textarea:focus,
+input:focus{
+    outline: none;
+}
+
+.iconHoldingCon{
+    border-radius: 7px;
+    background: #F3F8FF;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.rightSideSocialIcons svg,
+.rightSideSocialIcons{
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.errorMessage{
+    color: #F00;
+    font-family: Outfit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+/* TAB */
+@media only screen and (min-width: 801px) and (max-width: 1280px) {
+    .contectFollowMeeBlock p{
+        font-size: 14px;
+    }
+
+    .inputLable {
+        font-size: 16px;
+    }
+
+    .inputField{
+        font-size: 14px;
+    }
+
+    .contactMeHeading{
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .contactMeSubHeading{
+        font-size: 16px;
+        margin-left: 0px;
+        margin-top: 13px;
+        margin-bottom: 4px;
+    }
+
+    .iconHoldingCon{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .rightSideSocialIcons svg,
+    .rightSideSocialIcons{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+    .ContactMinContainer{
+        flex-direction: column;
+    }
+
+    .ContactRightContainer,
+    .ContactLeftContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 20px;
+    }
+
+    
+    .contactMeHeading{
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .contactMeSubHeading{
+        font-size: 14px;
+        margin-left: 0px;
+        margin-top: 13px;
+        margin-bottom: 4px;
+    }
+
+    .contectFollowMeeBlock{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items:center;
+        gap: 15px;
+        padding: 16px;
+        padding-left: 0;
+    }
+
+    .contectFollowMeeBlock p{
+        font-size: 12px;
+    }
+
+    .inputLable {
+        font-size: 14px;
+    }
+
+    .inputField{
+        font-size: 12px;
+    }
+
+    .iconHoldingCon{
+        border-radius: 4px;
+        width: 23px;
+        height: 23px;
+    }
+    
+    .rightSideSocialIcons svg,
+    .rightSideSocialIcons{
+        width: 13.225px;
+        height: 13.225px;
+    }
+
+}

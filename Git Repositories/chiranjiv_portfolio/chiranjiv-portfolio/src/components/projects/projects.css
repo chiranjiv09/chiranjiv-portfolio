@@ -1,0 +1,632 @@
+*{
+    box-sizing: border-box;
+}
+
+.projectsMainCon{
+    width: 100%;
+    overflow-y: auto;
+    padding-bottom: 30px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    height: 100%;
+    gap:40px;
+    height: calc(100vh - 200px);
+}
+
+.projectCard{
+    width: 370px;
+    height: auto;
+}
+
+.projectCount{
+    color: #5565E8;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.projectHeading{
+    color: #FFF;
+    font-family: "Fira Code";
+    font-size: 18px;
+    font-weight: 450;
+    margin-bottom: 14px;
+
+}
+
+.innerProjectCard{
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #1E2D3D;
+    background: #1C2B3A;
+    border-radius: 15px;
+}
+
+.innerProjectCardTopCon{
+    width: 100%;
+    height: 145px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding:10px;
+}
+
+.innerProjectCardTechUsed{
+    background: rgba(255, 255, 255, 0.04);
+    width: 100%;
+    padding: 10px;
+    margin-top:27px;
+    margin-bottom:27px;
+}
+
+.innerProjectCardTechUsed span{    
+    color: #607B96;
+    font-family: "Fira Code";
+    font-size: 12px;
+    font-weight: 450;
+    line-height: 16px; /* 133.333% */
+}
+
+.innerProjectTechnologiesCon{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.projectTechImg{
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.innerProjectCardBottomCon{
+    border: 1px solid #1E2D3D;
+    background: #000C17;
+    padding:20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.projectCardDesc{
+    color: #607B96;
+    font-family: "Fira Code";
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 24px; /* 133.333% */
+}
+
+.projectBtn{
+    border-radius: 8px;
+    color: #FFF;
+    font-family: "Fira Code";;
+    font-size: 14px;
+    font-weight: 450;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+    border-radius: 8px;
+    background: #1C2B3A;
+    border: none;
+    margin-top:20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* popup  */
+.projectPopupStaticCon{
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+    
+  .projectPopupinnerPopupCon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+    flex-shrink: 0;
+    padding: 2%;
+    position: relative;
+    z-index: 3;
+    /* overflow-y: auto; */
+    height:85%;
+
+    border-radius: 4px;
+    border: 0.5px solid #607B96;
+    background: #011627;
+    box-shadow: 0px 4px 20px 0px rgba(194, 194, 194, 0.10);
+}
+
+.projectPopuprightCon{
+    width: 100%;
+}
+
+.projectPopupLeftCon{
+    max-width: 443px;
+    border-right: 1px solid#FFF;
+    padding-right: 29px;
+    margin-right:29px;
+    height: 100%;
+    position: sticky;
+    top:0;
+}
+
+.projectPopupHeaderCon{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 100%;
+    gap:10px;
+}
+
+.projectPopupHeaderContent{
+    border-radius: 6px;
+    background: rgba(196, 196, 196, 0.34);
+    display: inline-flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    color: #FFF;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 450;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.projectPopupHeaderContent span{
+    color: #FFA67E;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 450;
+    text-decoration-line: underline;
+}
+
+.projectPopupGitIcon{
+    width: 22px;
+    height: 22px;
+}
+
+.popupCrossIcon svg{
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.projectMediaBtnsCon{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap:26px;
+    margin-top: 28px;
+}
+
+.projectMediaBtn{
+    color: #FFF;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap:8px;
+    padding-bottom: 8px;
+}
+
+.projectMediaBtn svg{
+    width: 16.222px;
+    height: 14.6px;
+}
+
+.selectedProjMediaBtn{
+    border-bottom:3px solid #EA2D2E;
+}
+
+.selectedProjMediaBtn svg path{
+    fill: #EA2D2E;
+}
+
+.projectMediaDisplayingCon{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    overflow: hidden;
+    overflow-y:auto;
+    margin-top: 20px;
+    position: relative;
+    height: calc(100vh - 290px);
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.projectMediaCard{
+    width: 255px;
+    height: 171px;
+    border-radius: 4px;
+    border: 1px solid #81A1C1;
+    background: lightgray 50% / cover no-repeat;
+}
+
+.innerProjectCard2{
+    background: transparent;
+    border:none;
+}
+
+.projectCardDesc2{
+    color: #E5E9F0;
+    font-family: "Fira Code";
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 21px;
+}
+
+.eachProjectMediaEl{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.noMediaCon{
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.popupGitBoxMobile,
+.popupInnerProjectBtnTwo,
+.popupBackBtn{
+    display: none;
+}
+
+
+
+/* TAB */
+@media only screen and (min-width: 801px) and (max-width: 1280px) {
+    .projectsMainCon{
+        padding-bottom: 20px;
+        padding: 35px;
+        gap:20px;
+    }
+
+    .projectCard{
+        /* width: 30%; */
+        max-width:290px;
+    }
+    
+    .projectCount{
+        font-size: 14px;
+    }
+    
+    .projectHeading{
+        font-size: 16px;
+    }
+
+    .innerProjectCardTopCon{
+        height: 120px;
+        flex-shrink: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding:7px;
+    }
+
+    .projectTechImg{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .innerProjectCardBottomCon{
+        padding:15px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    .projectCardDesc{
+        font-size: 16px;
+    }
+    
+    .projectBtn{
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 450;
+        margin-top:15px;
+        padding: 6px;
+    }
+
+    .projectPopupinnerPopupCon{
+        width: 90%;
+        padding: 2%;
+        max-height:90vh;
+    }
+
+    /* popup */
+    .projectPopupLeftCon{
+        max-width: 360px;
+        min-width: 360px;
+        padding-right: 20px;
+        margin-right:20px;
+        position: sticky;
+        top:0;
+    }
+    
+    .projectPopupHeaderContent{
+        border-radius: 4px;
+        padding: 6px;
+        gap: 4px;
+        font-size: 14px;
+        
+    }
+    
+    .projectPopupHeaderContent span{
+        font-size: 14px;
+        white-space: normal;
+        word-break: break-word;
+    }
+    
+    .projectPopupGitIcon{
+        width: 18px;
+        height: 18px;
+    }
+    
+    .popupCrossIcon svg{
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .projectMediaBtnsCon{
+        gap:18px;
+        margin-top: 20px;
+    }
+
+    .projectMediaBtn{
+        font-size: 14px;
+        gap:6px;
+        padding-bottom: 4px;
+    }
+
+    .projectMediaDisplayingCon{
+        gap:16px;
+        margin-top: 14px;
+    }
+
+    .projectMediaCard{
+        width: 180px;
+        height: 100px;
+    }
+
+    .popupGitBoxMobile,
+    .popupInnerProjectBtnTwo,
+    .popupBackBtn{
+        display: none;
+    }
+
+    
+}
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+    .projectCard{
+        width: 300px;
+        margin-left: 13px;
+        scroll-margin-top: 100px;
+    }
+    
+    .projectCount{
+        font-size: 12px;
+    }
+    
+    .projectHeading{
+        font-size: 14px;
+    }
+
+    .innerProjectCardTopCon{
+        height: 120px;
+        flex-shrink: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding:7px;
+    }
+
+    .projectTechImg{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .innerProjectCardBottomCon{
+        padding:15px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    .projectCardDesc{
+        font-size: 16px;
+    }
+    
+    .projectBtn{
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 450;
+        margin-top:15px;
+        padding: 6px;
+    }
+
+    .projectPopupinnerPopupCon{
+        width: 90%;
+        padding: 10px;
+        max-height:95vh;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    /* popup */
+
+    .projectPopupLeftCon{
+        max-width: 100%;
+        min-width: auto;
+        border-right: none;
+        padding-right: 0px;
+        margin-right:0px;
+        height: auto;
+        position: initial;
+        top:0;
+        width: 100%;
+    }
+    
+    .projectPopupHeaderContent{
+        border-radius: 4px;
+        padding: 6px;
+        gap: 4px;
+        font-size: 16px;
+    }
+    
+    .projectCardDesc,
+    .projectPopupHeaderContent span{
+        font-size: 14px;
+    }
+    
+    .projectPopupGitIcon{
+        width: 18px;
+        height: 18px;
+    }
+    
+    .popupCrossIcon svg{
+        width: 18px;
+        height: 18px;
+    }
+
+    .projectMediaBtnsCon{
+        gap:18px;
+        margin-top: 20px;
+    }
+
+    .projectMediaBtn{
+        font-size: 14px;
+        gap:6px;
+        padding-bottom: 4px;
+    }
+
+    .projectMediaDisplayingCon{
+        gap:16px;
+        margin-top: 14px;
+    }
+
+    .projectMediaCard{
+        width: 180px;
+        height: 100px;
+    }
+
+    .projectsMainCon{
+        top:0px;
+        padding: 0px;
+        height: calc(100vh - 100px);
+    }
+
+
+    .popupBackBtn{
+        background: #1E2D3D;
+        color: #FFF;
+        font-family: "Fira Code";
+        font-size: 16px;
+        font-weight: 400;
+        gap:8px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        padding-left: 15px;
+        width: 100%;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .projectMediaDisplayingCon{
+        gap:10px;
+        margin-top: 20px;
+        height: 100%;
+    }
+
+    .projectPopupHeaderContent,
+    .popupInnerProjectBtnOne,
+    .projectPopupHeaderCon{
+        display: none;
+    }
+
+    .noMediaCon{
+        height: 100%;
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .projectMediaCard{
+        width: 150px;
+        height: 89px;
+    }
+
+    .popupInnerProjectBtnTwo{
+        display: flex;
+    }
+
+    .popupInnerProjectBtnTwo{
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .popupGitBoxMobile{
+        width: 100%;
+        font-size: 10px;
+        margin-top: 17px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .innerProjectCardTechUsed{
+        padding: 10px;
+        margin-top:17px;
+        margin-bottom:17px;
+    }
+
+    .popupGitBoxMobile div{
+        display: flex;
+        align-items: center;
+        gap:4px;
+    }
+
+    .popupGitBoxMobile span{
+        word-break: break-word;
+        text-wrap: wrap;
+    }
+
+    
+}
