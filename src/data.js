@@ -77,11 +77,13 @@ export const basicDetails = {
 const subject = "Hello there!";
 const body = "Just wanted to say hi.";
 
-export const mailtoHref = `mailto:${basicDetails.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+// export const mailtoHref = `mailto:${basicDetails.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+export const mailtoHref = `mailto:${basicDetails.email}`;
+
 export const watsappToHref = `https://api.whatsapp.com/send?phone=+91${basicDetails.mobile}&text=Hello`;
 
 export const onCallingEmail = (e) => {
-    e.preventDefault();
     window.location.href = mailtoHref;
 };
 
@@ -463,13 +465,11 @@ export const profileDetails = [
 ];
 
 export const onRedirectTo = (url) => {
-    // window.open(url, "_blank", "noreferrer");
+    // href=`tel:+91${number}`
 
     let a= document.createElement('a');
     a.target= '_blank';
     a.href= url;
     a.click();
-
-    // window.location.href = url;
 }
 

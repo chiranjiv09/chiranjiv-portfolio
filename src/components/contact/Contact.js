@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+
 import './contact.css';
 
 import emailImg from '../../images/email.png';
@@ -12,11 +14,16 @@ import { basicDetails, mailtoHref, onRedirectTo, watsappToHref } from '../../dat
 
 
 export default function Contact() {
+    const [state, handleSubmit, reset] = useForm("mpzebkoo", {
+        data: {
+          subject: 'Hello There...',
+        }
+      });
+
     const [data, setData] = useState({});
     const [error, setError] = useState([]);
 
     const onChange = (e) => {
-
         let name = e.target.name;
         let value = e.target.value;
 
@@ -29,7 +36,9 @@ export default function Contact() {
         setData(prev => ({...prev, [name]: value }));
     };
 
-    const onSubmit = () => {
+    const onSubmit = async (e) => {
+        e.preventDefault();
+
         let errors = [];
 
         if(data.name === undefined || data.name === "" ){
@@ -53,6 +62,22 @@ export default function Contact() {
         if(errors.length === 0){
             // CALL Api Here...
             console.log(data);
+            // handleSubmit(e);
+
+            const response = await handleSubmit(e);
+            if (response && response.ok && response.ok === true) {
+              console.log("Form submitted successfully:", response);
+            } else {
+              console.error("Form submission failed:", response);
+            }
+
+                    
+            if (state.succeeded) {
+                console.log("Email Submited");
+            }else{
+                console.log("Email Failed");
+            }
+
         }else{
             console.log("Missing Field: ", errors);
         }
@@ -61,7 +86,12 @@ export default function Contact() {
 
     return (
         <div className='ContactMinContainer'>
-            <div className='ContactLeftContainer'>
+            <form 
+                onSubmit={(e)=>onSubmit(e)} 
+                className='ContactLeftContainer'
+                action="https://formspree.io/f/mpzebkoo"
+				method="POST"
+            >
                 <div className='inputFieldCon'>
                     <label className='inputLable'>_name:</label>
                     <input
@@ -92,6 +122,7 @@ export default function Contact() {
                     <label className='inputLable'>_message:</label>
                     <textarea 
                         required
+                        id='message'
                         name="message" 
                         className='inputField textAreaField' 
                         rows={5}
@@ -106,16 +137,24 @@ export default function Contact() {
                 <p className='errorMessage'>Fill The Required Fields...</p>
                 }
 
+                <ValidationError 
+                    prefix="Message" 
+                    field="message"
+                    errors={state.errors}
+                />
+
                 <Button
                     key="submit"
                     buttonId ="submit"
                     buttonClassName="submitMessageBtn"
-                    onSubmit={()=>onSubmit()}
+                    onSubmit={()=>("")}
+                    type="submit"
                     title="submit-message"
                     name="submit"
                     value={0}
+                    disabled={state.submitting}
                 />
-            </div>
+            </form >
 
             <div className='ContactRightContainer'>
                 <h2 className='contactMeHeading'>Thankyou for going through my profile!</h2>

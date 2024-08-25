@@ -3,7 +3,7 @@
 import React from "react";
 
 const Button = ({ buttonId, buttonConClassName, buttonClassName, onSubmit, 
-                title, value, name, icon, toolTip }) => {
+                title, value, name, icon, toolTip, type, disabled }) => {
 
     return(
         <div className={buttonConClassName}>
@@ -14,6 +14,8 @@ const Button = ({ buttonId, buttonConClassName, buttonClassName, onSubmit,
                 value={value}
                 name={name}
                 title={toolTip ? toolTip : ""}
+                type={type}
+                disabled={disabled}
             >
                 {title}
                 {icon && icon !== "" ? icon : ""}

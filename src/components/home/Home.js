@@ -9,28 +9,16 @@ import watsappImg from '../../images/whatsapp.png';
 
 import Button from '../../commonElements/Button';
 import { fileIcon } from '../../icons';
-import { basicDetails, mailtoHref, onCallingEmail, onRedirectTo, watsappToHref } from '../../data';
+import { basicDetails, mailtoHref, onRedirectTo, watsappToHref } from '../../data';
 import ResumePopup from './ResumePopup';
 
 const SocialMediaIcons = () => {
 
     return(
         <Fragment>
-            {/* <div onClick={()=>onRedirectTo(mailtoHref)} className="iconHoldingCon">
+            <div onClick={()=>onRedirectTo(mailtoHref)} className="iconHoldingCon">
                 <img className='rightSideSocialIcons' src={emailImg} alt="" />
-            </div> */}
-
-            <Button
-                key="mailtoHref"
-                buttonId ="mailtoHref"
-                buttonClassName="iconHoldingCon"
-                onSubmit={(e)=>onCallingEmail(e)}
-                title=""
-                name=""
-                value=""
-                icon={<img className='rightSideSocialIcons' src={emailImg} alt="" />}
-            />
-
+            </div>
 
             <div className="iconHoldingCon">
                 <img onClick={()=>onRedirectTo(basicDetails.github)} className='rightSideSocialIcons' src={githubImg} alt="" />
@@ -82,6 +70,7 @@ const Home = () => {
                 <p className="leftSideUserRole">&gt; <span style={{color : currentText == "Java Full-Stack" ? "#43D9AD" : currentText == "Web" ? "#C99FFF" : "#8C99FF" }}>{currentText}</span> Developer</p>
 
                 <p className="leftSideObjective">{basicDetails.careerObjective}</p>
+                
                 <Button
                     key="Resume"
                     buttonId ="Resume"
