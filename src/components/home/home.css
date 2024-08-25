@@ -579,7 +579,8 @@
         padding: 25px;
         flex-direction: column;
         justify-content: flex-start;
-        height: auto;
+        height: calc(100vh - 150px);
+        overflow-y: auto;
     }
 
     .iconHoldingConForMobile{
