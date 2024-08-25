@@ -3,7 +3,7 @@ import './allDetailsBlock.css';
 import { arrowIcon, BackgroundBottomSvg, BackgroundTopSvg, crossIcon, folderIcon } from '../../icons';
 import Button from '../../commonElements/Button';
 import Expereince from '../expereince/Expereince';
-import { companyDetails, educationDetails, projectDetails, skillsDetails, srollIntoView, profileDetails } from '../../data';
+import { companyDetails, educationDetails, projectDetails, skillsDetails, srollIntoView, profileDetails, isMobile } from '../../data';
 import Education from '../education/Education';
 import DetailsFolder from '../../commonElements/DetailsFolder';
 import Skills from '../skills/Skills';
@@ -37,17 +37,14 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
             srollIntoView(`${name}_block`);
         }
 
-        let dropdownEl = document.getElementById("appMainContainer");
 
-        if(dropdownEl){
             //for mobile ---
-            let displayWidth = dropdownEl.offsetWidth;
-            if(key === undefined && displayWidth <= 800){
+            if(key === undefined && isMobile()){
                 let oldObj = {...folderBlock};
                 oldObj[identifier] = !oldObj[identifier];
                 setFolderBlock(oldObj);
             }
-        };
+        
     };
     
     return (

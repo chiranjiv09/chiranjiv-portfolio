@@ -473,3 +473,14 @@ export const onRedirectTo = (url) => {
     a.click();
 }
 
+export const isMobile = () => {
+    let dropdownEl = document.getElementById("appMainContainer");
+    if(dropdownEl){
+    let displayWidth = dropdownEl.offsetWidth;
+        if(displayWidth !== undefined && displayWidth <= 800){
+            return true;
+        }else{
+            return false;
+        }
+    }
+};

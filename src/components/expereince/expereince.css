@@ -337,6 +337,10 @@
         width: 95%;
         scroll-margin-top: 100px;
     }
+
+    .expereinceMainCon .expereinceEachBox:last-child{
+        margin-bottom: 10px;
+    }
     
 
 }

@@ -42,12 +42,13 @@ function App() {
     <div id='appMainContainer' className="App">
       <div className="appInnerContainer">
         <Header block={block} onSelect={onSelect} />
-          {block == "Hello" ?
-              <Home />
-          :
-              <DetailsBlock block={block} onSelect={onSelect} selectedSections={selectedSections} />
+          {block == "Hello" &&
+            <Home />
           }
-        
+
+          {block != "Hello" &&
+            <DetailsBlock block={block} onSelect={onSelect} selectedSections={selectedSections} />
+          }
         <Footer />
       </div>
     </div>
