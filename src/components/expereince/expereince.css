@@ -190,6 +190,7 @@
     .expereinceMainCon{
         padding-top: 40px;
         padding-bottom: 20px;
+        height: calc(100vh - 165px);
     }
 
     .companyDesc,

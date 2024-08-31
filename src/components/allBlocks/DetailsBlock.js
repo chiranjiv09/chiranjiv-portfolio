@@ -38,14 +38,29 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
         }
 
 
-            //for mobile ---
-            if(key === undefined && isMobile()){
-                let oldObj = {...folderBlock};
-                oldObj[identifier] = !oldObj[identifier];
-                setFolderBlock(oldObj);
-            }
+        //for mobile ---
+        if(key === undefined && isMobile()){
+            let oldObj = {...folderBlock};
+            oldObj[identifier] = !oldObj[identifier];
+            setFolderBlock(oldObj);
+        }
         
     };
+
+    
+
+    const onMainConClick = (event) => {
+        let dropdownBlockKeyName = block == "Projects" ? "project" : block.toLowerCase();
+        let dropdownId = `dropdownCon_${dropdownBlockKeyName}`;
+        
+        var myElement = document.getElementById(dropdownId);
+    
+        if (myElement && !myElement.contains(event.target)) {
+            console.log('clicked outside');
+            onSelectBlock(undefined, undefined, dropdownBlockKeyName);
+        }
+    };
+    
     
     return (
         <div className="allDetailsBlockMainCon">
@@ -199,7 +214,10 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                 />
             </div>
 
-            <div className="allDetailsRightSideCon">
+            <div
+                className="allDetailsRightSideCon"
+                onClick={(e) => isMobile() ? onMainConClick(e) : ("")}
+            >
 {/* Selected Items Header */}
                 <div className="allDetailsRightSideHeaderCon">
                     {selectedSections && selectedSections.length > 0 && 

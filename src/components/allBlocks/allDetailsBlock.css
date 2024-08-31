@@ -20,6 +20,7 @@
 .allDetailsRightSideHeaderCon{
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .sideEachDropdownCon{
@@ -186,6 +187,8 @@
         font-size: 14px;
         gap: 7px;
         padding: 8px;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
 
     .sectionBtnCross svg{

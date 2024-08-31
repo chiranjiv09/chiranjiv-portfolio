@@ -4,6 +4,7 @@ import Footer from './components/home/Footer';
 import Header from './components/home/Header';
 import Home from './components/home/Home';
 import DetailsBlock from './components/allBlocks/DetailsBlock';
+import { isMobile } from './data';
 
 function App() {
 
@@ -42,10 +43,12 @@ function App() {
     <div id='appMainContainer' className="App">
       <div className="appInnerContainer">
         <Header block={block} onSelect={onSelect} />
-          {block == "Hello" &&
+          {/* {(block == "Hello" || isMobile()) && */}
+          {block == "Hello"&&
             <Home />
           }
 
+          {/* {(block != "Hello" || isMobile()) && */}
           {block != "Hello" &&
             <DetailsBlock block={block} onSelect={onSelect} selectedSections={selectedSections} />
           }

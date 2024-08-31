@@ -5,7 +5,7 @@ import Button from '../../commonElements/Button';
 import projectPosterImg from '../../images/projectPoster.jpg';
 import githubImg from '../../images/github.png';
 import { backArrowIcon, CompanyIconEl, popupCrossIcon } from '../../icons';
-import { basicDetails, onRedirectTo } from '../../data';
+import { basicDetails, isMobile, onMainConClick, onRedirectTo } from '../../data';
 
 // import video from '../../videos/'
 
@@ -16,23 +16,12 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
     let eachCrad = popupData.data ? popupData.data : "" ;
     let index = eachCrad.index ? eachCrad.index : "";
 
-
-    const onMainConClick = (event) => {
-        var myElement = document.getElementById('innerContainer');
-
-        if (myElement && !myElement.contains(event.target)) {
-            console.log('clicked outside');
-            onPopupClick("CLOSE");
-        }
-    };
-
-
   return (
-    <div className="projectPopupStaticCon" onClick={(e)=>onMainConClick(e)} >
+    <div className="projectPopupStaticCon" onClick={(e)=>onMainConClick(e, 'innerContainer', onPopupClick, "CLOSE" )} >
         <div className="projectPopupinnerPopupCon" id='innerContainer'>
             <div className='popupBackBtn' onClick={()=>onPopupClick("CLOSE")}>{backArrowIcon} Back</div>
             {/* Right side card con */}
-            <div className="projectPopupLeftCon">
+            <div className={`projectPopupLeftCon ${ isMobile() ? "" : "cardScroll"} `}>
                 <p className="projectCount">Project {index+1}</p>
                 <h3 className="projectHeading">_{eachCrad.name}</h3>
 
@@ -40,21 +29,29 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
                     <div style={{backgroundImage: `url(${projectPosterImg})`}} className="innerProjectCardTopCon">
                         <div className='innerProjectTechnologiesCon'>
                             {eachCrad.technologiesUsed && eachCrad.technologiesUsed.map((eachTech, eachIndex)=>{
-                                return(
-                                    <img key={`eachTech_${eachIndex}`} alt="" src={eachTech.url} className="projectTechImg" />
-                                )
+                                if(eachIndex < 3){
+                                    return(
+                                        <img 
+                                            key={`eachTech_${eachIndex}`} 
+                                            alt="" 
+                                            src={eachTech.url} 
+                                            className="projectTechImg" 
+                                            title={eachTech.name}
+                                        />
+                                    )
+                                }
                             })}
                         </div>
                     </div>
 
-                    <Button
+                    {/* <Button
                         key="project_btn_2"
                         buttonId ="project_btn_2"
                         buttonConClassName="projectBtnCon"
                         buttonClassName="projectBtn popupInnerProjectBtnTwo"
                         onSubmit={(e)=>("")}
                         title="view-project"
-                    />
+                    /> */}
 
                     <div onClick={()=>onRedirectTo(basicDetails.github)} className="projectPopupHeaderContent popupGitBoxMobile">
                         <div>
@@ -77,14 +74,14 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
 
                     <p className="projectCardDesc2">{eachCrad.contant}</p>
 
-                    <Button
+                    {/* <Button
                         key="project_btn_1"
                         buttonId ="project_btn_1"
                         buttonConClassName="projectBtnCon"
                         buttonClassName="projectBtn popupInnerProjectBtnOne"
                         onSubmit={(e)=>("")}
                         title="view-project"
-                    />
+                    /> */}
                 </div>
                 
             </div>
@@ -139,7 +136,7 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
                     })}
                 </div>
                 :
-                <div className="noMediaCon">Images Not Available</div>
+                <div className="noMediaCon">Images are not Available</div>
                 }
                 </Fragment>
                 }
@@ -160,7 +157,7 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
                     })}
                 </div>
                 :
-                <div className="noMediaCon">Videos Not Available</div>
+                <div className="noMediaCon">Videos are not Available</div>
                 }
                 </Fragment>
                 }

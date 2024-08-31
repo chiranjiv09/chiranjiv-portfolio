@@ -58,9 +58,17 @@ export default function Projects({onSelectBlock, selectedItem, folderBlock}) {
                         <div style={{backgroundImage: `url(${projectPosterImg})`}} className="innerProjectCardTopCon">
                             <div className='innerProjectTechnologiesCon'>
                                 {eachCrad.technologiesUsed.map((eachTech, eachIndex)=>{
-                                    return(
-                                        <img key={`eachTech_${eachIndex}`} alt="" src={eachTech.url} className="projectTechImg" />
-                                    )
+                                    if(eachIndex < 3){
+                                        return(
+                                            <img 
+                                                key={`eachTech_${eachIndex}`} 
+                                                alt="" 
+                                                src={eachTech.url} 
+                                                className="projectTechImg" 
+                                                title={eachTech.name}
+                                            />
+                                        )
+                                    }
                                 })}
                             </div>
                         </div>

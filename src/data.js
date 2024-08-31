@@ -18,9 +18,8 @@ import microservices from './images/microService.jpg';
 import springBoot from './images/springBoot.jpg';
 import springMVC from './images/springMVC.jpg';
 import resilience4j from './images/Resilience4j.png';
-import log4 from './images/log4.png';
 import restApis from './images/restAPIS.jpg';
-import servlet from './images/jsp.png'; ///////// ---------------
+import servlet from './images/jsp.png';
 import springCloud from './images/springcloud.png';
 import oop from './images/oop.png';
 import jdb from './images/java.jpg';
@@ -44,7 +43,7 @@ import AWSVPC from './images/AWS VPC.png';
 import AWSEKS from './images/AWS EKS.png';
 import AWSS3 from './images/AWS S3.png';
 import apiGateway from './images/Api Gateway.jpg';
-import cloudFront from './images/CloudFront.jpg';
+import cloudFront from './images/cloudFront.jpg';
 
 import gitHub from './images/github.jpg';
 import VSCode from './images/vscode.jpg';
@@ -57,6 +56,34 @@ import vertex from './images/vertex.png';
 import reventure from './images/reventure.png';
 import rpclan from './images/rpclan.png';
 
+
+import cicd from './images/cicd.png';
+import monolithic from './images/monolithic.webp';
+import microServicesArc from './images/microservicesArchitecture.png';
+import designPattern from './images/designPatterns.png';
+import debugging from './images/debugging.png';
+import sdlc from './images/sdlc.png';
+import dbms from './images/dbms.png';
+import os from './images/os.jpg';
+import dsa from './images/dsa.png';
+import agile from './images/agile-icon.jpg';
+import aws from './images/aws.png';
+import solr from './images/solr.jpg';
+import orm from './images/orm.png';
+import springSecurity from './images/spring_security.png';
+import jsp from './images/jsp.png';
+import spring from './images/spring.png';
+import velocity from './images/velocity.png';
+import swagger from './images/swagger.png';
+import auth0 from './images/auth0.png';
+import loadBalancer from './images/loadBalancer.png';
+import apiGateAway from './images/apiGateAway.png';
+import log4j from './images/log4j.png';
+import jwt from './images/jwt.png';
+import jdbc from './images/jdbc.png';
+import systemDesign from './images/systemDesign.jpg';
+import nextjs from './images/nextjs.jpg';
+import figma from './images/figma.webp';
 
 
 export const basicDetails = {
@@ -92,7 +119,7 @@ export const companyDetails = [
         name: "RP CLAN",
         logo: rpclan,
         joinDate: "Jun 2023 - Present",
-        role: "SOFTWARE  DEVELOPER",
+        role: "SOFTWARE DEVELOPER",
         keyPoints:[
             "Lead the development of two innovative projects, architecting,designing, and implementing robust solutions.",
             "Utilized Reactjs and Next js for front-end development, creating userfriendly interfaces.",
@@ -107,23 +134,22 @@ export const companyDetails = [
         joinDate: "Dec 2022- May 2023",
         role: "JAVA FULL STACK DEVELOPER",
         keyPoints:[
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
+            "Developed software in an Agile enviornment",
+            "Developed frontend dashboards using Angular Material and integrated with backend services",
+            "Created microservices leveraging Java, Spring Boot, Spring Cloud, and Hibernate",
+            "Implemented Resilience4j for circuit breaker, rate limiter, bulkhead, and timeout functionalities",
+            "Deployed applications on AWS using EC2, S3, RDS, IAM, VPC and EKS",
         ],
     },
     {
         name: "Skill Vertex",
         logo: vertex,
         joinDate: "Dec 2022- May 2023",
-        role: "WEB  DEVELOPER",
+        role: "WEB DEVELOPER",
         keyPoints:[
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
-            "Led the development of two innovative projects, responsible for architecture, design, and implementation",
+            "Engineered applications with Java, Html, Css, React",
+            "Learn basics of databases and javascript",
+            "Wrap the rest with live project",
         ],
     },
 ];
@@ -160,91 +186,138 @@ export const skillsDetails = [
             {name :"Java", url: java}, 
             {name :"Java 8", url: java8}, 
             {name :"Javascript", url: Javascript}, 
-            {name :"Typescript", url: typescript}, 
+            {name :"HTML", url: html}, 
+            {name :"CSS", url: css},  
         ]
     },
     {
-        name: "Frontend Language",
-        content:"Skilled in frontend languages, creating engaging and responsive user interfaces.",
+        name: "Tools",
+        content:"Experienced with various tools and IDEs for efficient development workflows.",
         technologies:[ 
-            {name :"Angular Material", url: angular}, 
-            {name :"React", url: react},  
-            {name :"Nodejs", url: node},  
-            {name :"HTML", url: html},
-            {name :"CSS", url: css}, 
-            {name :"Bootstrap", url: bootstrap}, 
-        ]
-    },
-    {
-        name: "Backend Language",
-        content:"Skilled in backend languages, ensuring efficient, reliable server-side solutions.",
-        technologies:[ 
-            {name :"Microservices", url: microservices}, 
-            {name :"Spring boot", url: springBoot}, 
-            {name :"Spring MVC ", url: springMVC}, 
-            {name :"Resilience4j", url: resilience4j},
-            {name :"Log4", url: log4},
-            {name :"Rest APIs", url: restApis}, 
-            {name :"Servlet", url: servlet}, 
-            {name :"Spring Cloud", url: springCloud}, 
-            {name :"OOP", url: oop},
-            {name :"JDB", url: jdb},
-            {name :"Hibernate", url: hibernate}, 
-            {name :"AOP", url: aop}, 
-            {name :"Spring Data", url: springData}, 
+            {name :"GitHub", url: gitHub}, 
+            {name :"VS Code", url: VSCode}, 
+            {name :"Eclipse", url: eclipse}, 
+            {name :"MySQL Workbench", url: mySQL},
+            {name :"STS", url: sts}, 
+            {name :"Postman", url: postman}, 
+            {name :"System Design", url: systemDesign}, 
             {name :"Maven", url: maven}, 
-        ]
-    },
-    {
-        name: "DevOps and Testing",
-        content:"Proficient in DevOps and Testing, optimizing deployments and ensuring quality.",
-        technologies:[ 
-            {name :"Kubernetes", url: kubernetes}, 
-            {name :"Jenkins", url: jenkins}, 
-            {name :"Docker", url:docker}, 
-            {name :"Git", url: git},
-            {name :"Selenium", url: selenium}, 
-            {name :"Prometheus", url: prometheus}, 
-            {name :"Grafana", url: grafana}, 
-            {name :"Mockito", url: mockito}
-        ]
-    },
-    {
-        name: "Cloud",
-        content:"Skilled in cloud technologies, optimizing deployments and enhancing infrastructure reliability.",
-        technologies:[ 
-            {name :"AWS RDS", url: AWSRDS}, 
-            {name :"AWS IAM", url: AWSIAM},  
-            {name :"AWS VPC", url: AWSVPC},  
-            {name :"AWS EKS", url: AWSEKS}, 
-            {name :"AWS S3", url: AWSS3},
+            {name :"JDBC", url: jdbc}, 
+            {name :"JWT", url: jwt},  
+            {name :"Log4j", url: log4j},  
             {name :"Api Gateway", url: apiGateway},
-            {name :"Cloud front", url: cloudFront},
-
+            {name :"Load Balancer", url: loadBalancer}, 
+            {name :"Auth0", url: auth0}, 
+            {name :"Swagger", url: swagger}, 
+            {name :"Velocity Engine", url: velocity}, 
         ]
     },
     {
         name: "Frameworks",
         content:"Proficient in diverse frameworks, delivering scalable and maintainable software solutions.",
         technologies:[ 
+            {name :"Spring Framework", url: spring}, 
             {name :"Spring boot", url: springBoot}, 
-            {name :"Spring Cloud", url: springCloud}, 
+            {name :"ReactJS", url: react},  
             {name :"Hibernate", url: hibernate}, 
-            {name :"Angular", url: angular}
+            {name :"Spring Data JPA", url: springData}, 
+            {name :"Spring MVC ", url: springMVC}, 
+            {name :"Spring Cloud (Microservices)", url: springCloud}, 
+            {name :"JSP", url: jsp},  
+            {name :"Servlet", url: servlet}, 
+            {name :"Angular", url: angular},
+            {name :"Spring Security", url: springSecurity },  
+            {name :"ORM", url: orm},  
         ]
     },
     {
-        name: "Tools and IDEs",
-        content:"Experienced with various tools and IDEs for efficient development workflows.",
+        name: "Database",
+        content:"Skilled in Database technologies.",
         technologies:[ 
-            {name :"GitHub", url: gitHub}, 
-            {name :"VS Code", url: VSCode}, 
-            {name :"Eclipse", url: eclipse}, 
             {name :"MySQL", url: mySQL},
-            {name :"STS", url: sts}, 
-            {name :"Postman", url: postman}, 
+            {name :"Solar Search Engine", url: solr }, 
         ]
     },
+    {
+        name: "DevOps",
+        content:"Proficient in DevOps and Testing, optimizing deployments and ensuring quality.",
+        technologies:[ 
+            {name :"Git", url: git},
+            {name :"Jenkins", url: jenkins}, 
+            {name :"Docker", url:docker}, 
+            {name :"AWS (RDS, S3, EC2, IAM, VPC, CloudFront)", url: aws}, // ====
+
+            // {name :"Selenium", url: selenium}, 
+            // {name :"Prometheus", url: prometheus}, 
+            // {name :"Grafana", url: grafana}, 
+            // {name :"Mockito", url: mockito}
+            // {name :"Kubernetes", url: kubernetes}, 
+        ]
+    },
+    {
+        name: "Methodologies & Concepts",
+        content:"Skilled in Methodologies & Concepts.",
+        technologies:[ 
+            {name :"Agile Methodologies", url: agile }, 
+            {name :"Data Structures and Algorithms (DSA)", url: dsa}, 
+            {name :"Operating Systems (OS)", url: os}, 
+            {name :"Database Management Systems (DBMS)", url: dbms}, 
+            {name :"Software Development Life Cycle (SDLC)", url: sdlc}, 
+            {name :"Debugging", url: debugging}, 
+            {name :"Design Patterns", url: designPattern}, 
+            {name :"Microservices Architecture", url: microServicesArc }, 
+            {name :"Monolithic Architecture", url: monolithic}, 
+            {name :"CI/CD", url: cicd}, 
+            {name :"REST APIs", url: restApis},  
+
+        ]
+    },
+
+    // {
+    //     name: "Cloud",
+    //     content:"Skilled in cloud technologies, optimizing deployments and enhancing infrastructure reliability.",
+    //     technologies:[ 
+    //         {name :"AWS RDS", url: AWSRDS}, 
+    //         {name :"AWS IAM", url: AWSIAM},  
+    //         {name :"AWS VPC", url: AWSVPC},  
+    //         {name :"AWS EKS", url: AWSEKS}, 
+    //         {name :"AWS S3", url: AWSS3},
+    //         {name :"Api Gateway", url: apiGateway},
+    //         {name :"Cloud front", url: cloudFront},
+    //     ]
+    // },
+    // {
+    //     name: "Frontend Language",
+    //     content:"Skilled in frontend languages, creating engaging and responsive user interfaces.",
+    //     technologies:[ 
+    //         {name :"Angular Material", url: angular}, 
+    //         {name :"React", url: react},  
+    //         {name :"Nodejs", url: node},  
+    //         {name :"HTML", url: html},
+    //         {name :"CSS", url: css}, 
+    //         {name :"Bootstrap", url: bootstrap}, 
+    //     ]
+    // },
+    // {
+    //     name: "Backend Language",
+    //     content:"Skilled in backend languages, ensuring efficient, reliable server-side solutions.",
+    //     technologies:[ 
+    //         {name :"Microservices", url: microservices}, 
+    //         {name :"Spring boot", url: springBoot}, 
+    //         {name :"Spring MVC ", url: springMVC}, 
+    //         {name :"Resilience4j", url: resilience4j},
+    //         {name :"Log4", url: log4},
+    //         {name :"Rest APIs", url: restApis}, 
+    //         {name :"Servlet", url: servlet}, 
+    //         {name :"Spring Cloud", url: springCloud}, 
+    //         {name :"OOP", url: oop},
+    //         {name :"JDB", url: jdb},
+    //         {name :"Hibernate", url: hibernate}, 
+    //         {name :"AOP", url: aop}, 
+    //         {name :"Spring Data", url: springData}, 
+    //         {name :"Maven", url: maven}, 
+    //     ]
+    // },
 ];
 
 export const projectDetails = [
@@ -252,103 +325,119 @@ export const projectDetails = [
         name:"Get Right Property",
         technologiesUsed: [
             {name: "CSS", url:css},
-            {name: "Javascript", url:Javascript},
-            {name: "html", url:html},
+            {name: "Javascript", url: Javascript},
+            {name: "html", url: html},
+            {name: "Java", url: java},
+            {name: "Spring Boot", url: springBoot},
+            {name: "Spring Data JPA", url: springData},
+            {name: "ReactJS", url: react},
+            {name: "MYSQL", url: mySQL},
+            {name: "Hibernate", url: hibernate},
+            {name: "Solr search Engine", url: solr},
+            {name: "NextJs", url: nextjs},
+            {name: "Spring MVC", url: springMVC},
+            {name: "AWS(RDS,EC2,S3,IAM,CDN", url: aws},
+            {name: "Jenkins", url: jenkins},
+            {name: "JWT", url: jwt},
+            {name: "Spring Security", url: springSecurity},
+            {name: "GitHub", url: gitHub},
+            {name: "CI/CD", url: cicd},
+            {name: "Maven", url: maven},
+            {name: "DSA", url: dsa},
+            {name: "Figma", url: figma},
         ],
         description:"Developed secure real estate site with Java, Spring Boot, React, AWS.",
         link:"",
         contant: "Developed a real estate website with Java, Spring Boot, ReactJs, and NextJs. Integrated security using Spring Security and JWT, and efficient search with Solr. Hosted on AWS EC2 with S3 and RDS storage. Implemented CI/CD pipelines using Jenkins and Maven.",
-        images: [
-            "https://www.shutterstock.com/shutterstock/photos/1932042689/display_1500/stock-photo-businessman-using-mobile-smart-phone-business-global-internet-connection-application-technology-1932042689.jpg",
-            "https://thumbs.dreamstime.com/z/businessman-shows-modern-technology-business-as-concept-30551144.jpg",
-            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
-            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
-            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
-            "https://www.shutterstock.com/shutterstock/photos/1932042689/display_1500/stock-photo-businessman-using-mobile-smart-phone-business-global-internet-connection-application-technology-1932042689.jpg",
-            "https://thumbs.dreamstime.com/z/businessman-shows-modern-technology-business-as-concept-30551144.jpg",
-            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
-            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
-            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
-        ],
+        images: [],
         videos: [],
     },
     {
         name:"Rp Clan Internal Application",
         technologiesUsed: [
             {name: "CSS", url:css},
-            {name: "Javascript", url:Javascript},
-            {name: "html", url:html},
+            {name: "Javascript", url: Javascript},
+            {name: "html", url: html},
+            {name: "Java", url: java},
+            {name: "Spring Boot", url: springBoot},
+            {name: "Spring Data JPA", url: springData},
+            {name: "ReactJS", url: react},
+            {name: "MYSQL", url: mySQL},
+            {name: "Hibernate", url: hibernate},
+            {name: "Solr search Engine", url: solr},
+            {name: "NextJs", url: nextjs},
+            {name: "Spring MVC", url: springMVC},
+            {name: "AWS(RDS,EC2,S3,IAM,CDN", url: aws},
+            {name: "Jenkins", url: jenkins},
+            {name: "JWT", url: jwt},
+            {name: "Spring Security", url: springSecurity},
+            {name: "GitHub", url: gitHub},
+            {name: "CI/CD", url: cicd},
+            {name: "Maven", url: maven},
+            {name: "DSA", url: dsa},
         ],        
         description:"Streamlined property listings with efficient data approval system.",
         link:"",
         contant: "Developed and implemented an internal data approval system for Get Right Property, streamlining workflows for property listings review and approval. Ensured data accuracy, security, and compliance with protection standards. Utilized modern technologies to automate processes, enhancing efficiency and overall data management.",
-        images: [
-            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
-            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
-            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
-            "https://www.shutterstock.com/shutterstock/photos/1932042689/display_1500/stock-photo-businessman-using-mobile-smart-phone-business-global-internet-connection-application-technology-1932042689.jpg",
-            "https://thumbs.dreamstime.com/z/businessman-shows-modern-technology-business-as-concept-30551144.jpg",
-            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
-            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
-            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
-        ],
-        videos: [
-            "https://youtu.be/9BmYEVNgzqA?si=Xkk30-cO9RUxAeci",
-            "https://youtu.be/cJpkcmXOjws?si=m4s0Y_ZlbISua5kJ"
-        ],
+        images: [],
+        videos: [],
     },
     {
-        name:"Expense Tracker ",
+        name:"Expense Tracker",
         technologiesUsed: [
-            {name: "CSS", url:css},
+            {name: "Java", url: java},
+            {name :"Java8", url: java8}, 
             {name: "Javascript", url:Javascript},
-            {name: "html", url:html},
+            {name :"Spring Framework", url: spring},
+            {name: "Spring Boot", url: springBoot},
+            {name: "Spring Security", url: springSecurity},
+            {name: "Spring Boot", url: springBoot},
+            {name: "ReactJS", url: react},
+            {name: "JWT", url: jwt},
+            {name: "Spring Data", url: springData},
+            {name :"Spring ORM", url: orm},  
+            {name: "AWS (RDS, S3, EC2)", url: aws},
+            {name: "CI/CD", url: cicd},
+            {name: "Maven", url: maven},
+            {name: "Figma", url: figma},
         ],        
         description:"Streamlined property listings with efficient data approval system.",
         link:"",
         contant: "An efficient expense tracking application enabling users to monitor spending and split expenses into groups for simplified management and collaboration. Users can easily categorize expenditures and analyze financial trends, promoting effective budgeting and financial transparency.",
-        images: [
-            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
-            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
-            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
-        ],
-        videos: [
-            "https://youtu.be/C4XhrSZNMDE?si=j-irqIOM_-yztLQY",
-            "https://youtu.be/9BmYEVNgzqA?si=Xkk30-cO9RUxAeci",
-            "https://youtu.be/cJpkcmXOjws?si=m4s0Y_ZlbISua5kJ",
-            "https://youtu.be/C4XhrSZNMDE?si=j-irqIOM_-yztLQY",
-            "https://youtu.be/9BmYEVNgzqA?si=Xkk30-cO9RUxAeci",
-            "https://youtu.be/cJpkcmXOjws?si=m4s0Y_ZlbISua5kJ"
-        ],
+        images: [],
+        videos: [],
     },
     {
         name:"Hospital Management System",
         technologiesUsed: [
-            {name: "CSS", url:css},
-            {name: "Javascript", url:Javascript},
-            {name: "html", url:html},
+            {name :"Spring Framework", url: spring},
+            {name: "Spring Boot", url: springBoot},
+            {name :"Spring Cloud (Microservices)", url: springCloud},
+            {name: "AWS (RDS, S3, EC2, IAM, VPC, CloudFront)", url: aws},
+            {name: "Jenkins", url: jenkins},
+            {name: "Spring Security", url: springSecurity},
+            {name: "CI/CD", url: cicd},
+            {name: "Maven", url: maven},
+            {name: "Docker", url: docker},
+            {name: "Angular", url: angular},
+            {name: "Javascript", url: Javascript},
+            {name: "Auth0", url: auth0},
+            {name: "JDBC", url: jdbc},
         ],        
         description:"Built web app for booking, health records, and management.",
         link:"",
-        contant: "Website that allows you to add remove update and get information on trainers and trainees who are present in a facility.",
-        images: [
-            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
-            "https://www.shutterstock.com/shutterstock/photos/1932042689/display_1500/stock-photo-businessman-using-mobile-smart-phone-business-global-internet-connection-application-technology-1932042689.jpg",
-            "https://thumbs.dreamstime.com/z/businessman-shows-modern-technology-business-as-concept-30551144.jpg",
-            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
-        ],
-        videos: [
-            "https://youtu.be/C4XhrSZNMDE?si=j-irqIOM_-yztLQY",
-            "https://youtu.be/9BmYEVNgzqA?si=Xkk30-cO9RUxAeci",
-            "https://youtu.be/cJpkcmXOjws?si=m4s0Y_ZlbISua5kJ"
-        ],
+        contant: "Developed a web application for patients to book appointments, access health records, receive notifications and enable physicians and nurses to manage and update diagnosis and medication details efficiently.",
+        images: [],
+        videos: [],
     },
     {
         name:"PDF to IMAGE Converter",
         technologiesUsed: [
-            {name: "CSS", url:css},
+            {name: "ReactJS", url: react},
+            {name: "Cascading Style Sheets (CSS)", url:css},
             {name: "Javascript", url:Javascript},
             {name: "html", url:html},
+            {name: "Figma", url: figma},
         ],        
         description:"Converts PDFs to customizable images in JPEG, JPG, PNG formats; GitHub code available.",
         link:"",
@@ -359,9 +448,16 @@ export const projectDetails = [
     {
         name:"Training Feedback Management System",
         technologiesUsed: [
-            {name: "CSS", url:css},
-            {name: "Javascript", url:Javascript},
+            {name: "Java", url: java},
+            {name: "MYSQL", url: mySQL},
+            {name: "JDBC", url: jdbc},
+            {name: "Maven", url: maven},
+            {name :"JSP", url: jsp},  
+            {name :"Eclipse IDE", url: eclipse}, 
+            {name :"Servlet", url: servlet}, 
             {name: "html", url:html},
+            {name: "CSS", url:css},
+            {name: "JDBC", url: jdbc},
         ],        
         description:"Website for managing trainer and trainee information in facility.",
         link:"",
@@ -376,13 +472,15 @@ export const projectDetails = [
     {
         name:"Personal Portfolio Project",
         technologiesUsed: [
+            {name: "ReactJS", url: react},
             {name: "CSS", url:css},
             {name: "Javascript", url:Javascript},
             {name: "html", url:html},
+            {name: "Figma", url: figma},
         ],        
         description:"Highlighting my journey, skills, and expertise in development.",
         link:"",
-        contant: "A showcase of my professional journey, skills, and accomplishments, highlighting projects and experiences in software development and Featuring a collection of works demonstrating expertise skills.",
+        contant: "A showcase of my professional journey, skills, and accomplishments, highlighting projects and experiences in software development and Featuring a collection of works demonstrating expertise skills.",
         images: [],
         videos: [],
     },
@@ -482,5 +580,14 @@ export const isMobile = () => {
         }else{
             return false;
         }
+    }
+};
+
+export const onMainConClick = (event, id, setter, arg) => {
+    var myElement = document.getElementById(id);
+
+    if (myElement && !myElement.contains(event.target)) {
+        console.log('clicked outside');
+        setter(arg);
     }
 };

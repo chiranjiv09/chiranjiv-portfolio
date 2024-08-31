@@ -12,6 +12,7 @@
     flex-direction: column;
     height: calc(100vh - 200px);
     padding: 4%;
+    overflow-y: auto;
 }
 
 .ContactRightContainer{
@@ -161,6 +162,11 @@ input:focus{
 
 /* TAB */
 @media only screen and (min-width: 801px) and (max-width: 1280px) {
+    .ContactRightContainer,
+    .ContactLeftContainer{
+        height: calc(100vh - 165px);
+    }
+
     .contectFollowMeeBlock p{
         font-size: 14px;
     }
@@ -200,20 +206,20 @@ input:focus{
 
 /* MOBILE */
 @media only screen and (max-width: 800px) {
-    .ContactMinContainer{
-        flex-direction: column;
-    }
-
     .ContactRightContainer,
     .ContactLeftContainer{
         width: 100%;
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: auto;
         padding: 20px;
+        overflow-y: hidden;
     }
 
-    
+    .ContactLeftContainer form{
+        height: 100%;
+    }
+
     .contactMeHeading{
         font-size: 16px;
         text-align: left;
@@ -258,6 +264,12 @@ input:focus{
     .rightSideSocialIcons{
         width: 13.225px;
         height: 13.225px;
+    }
+
+    .ContactMinContainer{
+        flex-direction: column;
+        max-height: 600px;
+        overflow-y: auto;
     }
 
 }

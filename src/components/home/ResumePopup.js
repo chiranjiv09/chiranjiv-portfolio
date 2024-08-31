@@ -1,22 +1,12 @@
 import React from 'react';
 
 import { popupCrossIcon } from '../../icons';
-import { basicDetails } from '../../data';
+import { basicDetails, onMainConClick } from '../../data';
 
 export default function ResumePopup({setIsResumeOpen}) {
 
-    const onMainConClick = (event) => {
-        var myElement = document.getElementById('innerResumeContainer');
-
-        if (myElement && !myElement.contains(event.target)) {
-            console.log('clicked outside');
-            setIsResumeOpen(false);
-        }
-    };
-
-
   return (
-    <div className="projectPopupStaticCon" onClick={(e)=>onMainConClick(e)} >
+    <div className="projectPopupStaticCon" onClick={(e)=>onMainConClick(e, 'innerResumeContainer', setIsResumeOpen, false )} >
         <div className="projectPopupinnerPopupCon resumePopupinnerPopupCon" id='innerResumeContainer'>
             <div className="projectPopupHeaderCon">
                     {/* <p className="projectPopupHeaderContent">

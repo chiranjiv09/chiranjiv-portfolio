@@ -17,7 +17,7 @@ export default function DetailsFolder({title, keyName, onFunctionCall, data, sec
         />
 
         {folderBlock[keyName] &&
-        <div className="showingComapnysCon">
+        <div id={`dropdownCon_${keyName}`} className="showingComapnysCon">
             {data.map((eachCmny, eachInd)=>{
                 return(
                     <p key={`cmpny_${eachInd}`} className={`showingComapny ${selectedItem[section] == eachCmny.name ? "selectedsideEachDropdownCon" : "" }`} onClick={()=>onFunctionCall(eachCmny.name, section)}>

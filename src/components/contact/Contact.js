@@ -86,76 +86,77 @@ export default function Contact() {
 
     return (
         <div className='ContactMinContainer'>
-            <form 
-                onSubmit={(e)=>onSubmit(e)} 
-                className='ContactLeftContainer'
-                action="https://formspree.io/f/mpzebkoo"
-				method="POST"
-            >
-                <div className='inputFieldCon'>
-                    <label className='inputLable'>_name:</label>
-                    <input
-                        required
-                        style={{ borderColor: error.includes('name') ? "#F00" : "" }}
-                        type="text"
-                        onChange={onChange} 
-                        placeholder='Enter Your Name...' 
-                        name="name" 
-                        className='inputField' 
+            <div className='ContactLeftContainer'>
+                <form 
+                    onSubmit={(e)=>onSubmit(e)} 
+                    
+                    action="https://formspree.io/f/mpzebkoo"
+                    method="POST"
+                >
+                    <div className='inputFieldCon'>
+                        <label className='inputLable'>_name:</label>
+                        <input
+                            required
+                            style={{ borderColor: error.includes('name') ? "#F00" : "" }}
+                            type="text"
+                            onChange={onChange} 
+                            placeholder='Enter Your Name...' 
+                            name="name" 
+                            className='inputField' 
+                        />
+                    </div>
+
+                    <div className='inputFieldCon'>
+                        <label className='inputLable'>_email:</label>
+                        <input 
+                            required
+                            type="email" 
+                            onChange={onChange} 
+                            placeholder='Enter Your Email...' 
+                            name="email" 
+                            className='inputField' 
+                            style={{ borderColor: error.includes('email') ? "#F00" : "" }}
+                        />
+                    </div>
+
+                    <div className='inputFieldCon'>
+                        <label className='inputLable'>_message:</label>
+                        <textarea 
+                            required
+                            id='message'
+                            name="message" 
+                            className='inputField textAreaField' 
+                            rows={5}
+                            cols={100}
+                            placeholder='Enter Your Message...'
+                            onChange={onChange}
+                            style={{ borderColor: error.includes('message') ? "#F00" : "" }}
+                        />
+                    </div>
+
+                    {error.length !== 0 &&
+                    <p className='errorMessage'>Fill The Required Fields...</p>
+                    }
+
+                    <ValidationError 
+                        prefix="Message" 
+                        field="message"
+                        errors={state.errors}
                     />
-                </div>
 
-                <div className='inputFieldCon'>
-                    <label className='inputLable'>_email:</label>
-                    <input 
-                        required
-                        type="email" 
-                        onChange={onChange} 
-                        placeholder='Enter Your Email...' 
-                        name="email" 
-                        className='inputField' 
-                        style={{ borderColor: error.includes('email') ? "#F00" : "" }}
+                    <Button
+                        key="submit"
+                        buttonId ="submit"
+                        buttonClassName="submitMessageBtn"
+                        onSubmit={()=>("")}
+                        type="submit"
+                        title="submit-message"
+                        name="submit"
+                        value={0}
+                        disabled={state.submitting}
                     />
-                </div>
-
-                <div className='inputFieldCon'>
-                    <label className='inputLable'>_message:</label>
-                    <textarea 
-                        required
-                        id='message'
-                        name="message" 
-                        className='inputField textAreaField' 
-                        rows={5}
-                        cols={100}
-                        placeholder='Enter Your Message...'
-                        onChange={onChange}
-                        style={{ borderColor: error.includes('message') ? "#F00" : "" }}
-                    />
-                </div>
-
-                {error.length !== 0 &&
-                <p className='errorMessage'>Fill The Required Fields...</p>
-                }
-
-                <ValidationError 
-                    prefix="Message" 
-                    field="message"
-                    errors={state.errors}
-                />
-
-                <Button
-                    key="submit"
-                    buttonId ="submit"
-                    buttonClassName="submitMessageBtn"
-                    onSubmit={()=>("")}
-                    type="submit"
-                    title="submit-message"
-                    name="submit"
-                    value={0}
-                    disabled={state.submitting}
-                />
-            </form >
-
+                </form >
+            </div>
             <div className='ContactRightContainer'>
                 <h2 className='contactMeHeading'>Thankyou for going through my profile!</h2>
                 <div className='contactMeSubHeading'>For Collaboration</div>
