@@ -4,7 +4,7 @@ import { projectDetails } from '../../data'
 
 export default function MyProjects() {
     return (
-        <div id={`${"Projects"}_block`}>
+        <div id={`${"Projects"}_block`} className="profileEachBlock">
             <p className="eachSkillsBtn" >
                 <hr className='eachSkillsBtnHrLine' />
                 <CompanyIconEl className="companyIconEl" />

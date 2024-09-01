@@ -18,7 +18,7 @@ export default function MyProfile({setIsResumeOpen}) {
             <p className="myProfileObjective">A passionate Software Developer, I thrive on learning and building innovative solutions. I specialize in infrastructure, containerization, and Serverless/Cloud technologies, driven by a love for programming and community contribution.</p>
             <div className="profileResumeBtnsCon">
                 <Button
-                    key="Resume"
+                    key="Download Resume"
                     buttonId ="Resume"
                     buttonClassName="resumeBtn"
                     onSubmit={()=>setIsResumeOpen(true)}
@@ -29,8 +29,8 @@ export default function MyProfile({setIsResumeOpen}) {
                 />
 
                 <Button
-                    key="Resume"
-                    buttonId ="Resume"
+                    key="redirectToLinkDin"
+                    buttonId ="redirectToLinkDin"
                     buttonClassName="resumeBtn profileIconBtns"
                     onSubmit={()=>onRedirectTo(basicDetails.linkedin)}
                     title=""
@@ -40,8 +40,8 @@ export default function MyProfile({setIsResumeOpen}) {
                 />
 
                 <Button
-                    key="Resume"
-                    buttonId ="Resume"
+                    key="redirectToGit"
+                    buttonId ="redirectToGit"
                     buttonClassName="resumeBtn profileIconBtns"
                     onSubmit={()=>onRedirectTo(basicDetails.github)}
                     title=""
@@ -49,8 +49,6 @@ export default function MyProfile({setIsResumeOpen}) {
                     value={0}
                     icon={ginIcon}
                 />
-
-
             </div>
         </div>
     )

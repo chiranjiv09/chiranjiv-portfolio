@@ -72,7 +72,7 @@ const Home = () => {
                 <p className="leftSideObjective">{basicDetails.careerObjective}</p>
                 
                 <Button
-                    key="Resume"
+                    key="HomeResume"
                     buttonId ="Resume"
                     buttonClassName="resumeBtn"
                     onSubmit={()=>setIsResumeOpen(true)}

@@ -4,7 +4,7 @@ import { educationDetails } from '../../data'
 
 export default function MyEducation() {
     return (
-        <div id={`${"Education"}_block`}>
+        <div id={`${"Education"}_block`} className="profileEachBlock">
             <p className="eachSkillsBtn" >
                 <hr className='eachSkillsBtnHrLine' />
                 <CompanyIconEl className="companyIconEl" />

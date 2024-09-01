@@ -4,7 +4,7 @@ import { skillsDetails } from '../../data'
 
 export default function MySkills() {
     return (
-        <div id={`${"Skills"}_block`}>
+        <div id={`${"Skills"}_block`} className="profileEachBlock">
             <p className="eachSkillsBtn" >
                 <hr className='eachSkillsBtnHrLine' />
                 <CompanyIconEl className="companyIconEl" />

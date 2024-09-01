@@ -1,7 +1,10 @@
-import React, { Fragment, useState } from 'react'
-import { basicDetails, profileDetails } from '../../data';
+import React, { Fragment, useEffect, useState, useRef } from 'react';
+import Scrollspy from 'react-scrollspy';
+
 import '../skills/skills.css';
 import './profile.css';
+
+import { basicDetails, profileDetails } from '../../data';
 import { arrowIcon, CompanyIconEl } from '../../icons';
 import MyProfile from './MyProfile';
 import MyExperince from './MyExperince';
@@ -12,34 +15,44 @@ import ResumePopup from '../home/ResumePopup';
 import DetailsFolder from '../../commonElements/DetailsFolder';
 
 export default function Profile({onSelectBlock, selectedOne, folderBlock, selectedItem}) {
-    const [allNames, setAllNames ] = useState(profileDetails.map(each=>each.name));
     const [isResumeOpen, setIsResumeOpen] = useState(false);
+    const allNames = profileDetails.map(each=>each.name);
+    const containerRef = useRef(null);
 
-    // useEffect(()=>{
-    //     let index = allNames.indexOf(selectedOne);
-    //     let partOne = allNames.slice(index, allNames.length);
-    //     let partTwo = allNames.slice(0, index);
+    const sections = ["About Me_block", "Experience_block", "Skills_block",  "Projects_block",  "Education_block"];
 
-    //     partOne.push(...partTwo);
-    //     setAllNames(partOne);
-    // },[selectedOne]);
+    const handleUpdate = (currentItem) => {
+        console.log("Current active section:", currentItem);
+    };
 
     return (
-        <div className="skillsMainCon">
+        <div className="skillsMainCon" id='container' ref={containerRef}>
             <div className="profileLeftSideCon">
                 <h3 className='profileUserHeading'>{basicDetails.name}</h3>
                 <p className='profileRollText'>{basicDetails.designetion}</p>
-                <div className="skillsNamesDisplayCon">
+                <Scrollspy 
+                    items={sections} 
+                    currentClassName="is-current" 
+                    offset={-50}
+                    componentTag="ul" 
+                    className="skillsNamesDisplayCon"
+                    onUpdate={handleUpdate} 
+                    // rootEl={containerRef.current}
+                >
                     {allNames.map((eachOne, index)=>{
                         return (
-                            <p className={`eachSkillsBtn ${selectedOne == eachOne ? "selectedEachSkillsBtn" : ''}`} key={`profile_${index}`} onClick={()=>onSelectBlock(eachOne, "profile")}>
+                            <li 
+                                key={`profile_${index}`} 
+                                className={`eachSkillsBtn ${selectedOne == eachOne ? "selectedEachSkillsBtn" : ''}`} 
+                                onClick={()=>onSelectBlock(eachOne, "profile")}
+                            >
                                 <hr className='eachSkillsBtnHrLine' />
                                 <CompanyIconEl className="companyIconEl" />
                                 {eachOne}
-                            </p>
+                            </li>
                         )
                     })}
-                </div>
+                </Scrollspy>
             </div>
 
             <Fragment>
@@ -59,7 +72,6 @@ export default function Profile({onSelectBlock, selectedOne, folderBlock, select
 
                 <div className="profileRightSideCon">
                     {isResumeOpen && <ResumePopup setIsResumeOpen={setIsResumeOpen} />}
-
                     <MyProfile setIsResumeOpen={setIsResumeOpen} />
                     <MyExperince />
                     <MySkills />
