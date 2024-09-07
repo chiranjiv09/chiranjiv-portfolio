@@ -51,6 +51,13 @@
 
 .profileIconBtns{
     border-radius:50% !important;
+    padding-left: 6px;
+    padding-right: 6px;
+    min-height: 32px;
+    min-width: 32px;
+    display: flex;
+    align-items:center;
+    justify-content:center
 }
 
 .profileResumeBtnsCon{

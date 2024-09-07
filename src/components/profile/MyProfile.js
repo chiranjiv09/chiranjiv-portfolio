@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { CompanyIconEl, fileIcon, ginIcon, linkdinIcon } from '../../icons'
+import { CompanyIconEl, fileIcon, ginIcon, linkdinIcon, watsappIcon } from '../../icons'
 import Button from '../../commonElements/Button'
-import { basicDetails, onRedirectTo } from '../../data'
+import { basicDetails, onRedirectTo, watsappToHref } from '../../data'
 
 export default function MyProfile({setIsResumeOpen}) {
 
@@ -48,6 +48,17 @@ export default function MyProfile({setIsResumeOpen}) {
                     name=""
                     value={0}
                     icon={ginIcon}
+                />
+
+                <Button
+                    key="redirectToWatsapp" 
+                    buttonId ="redirectToWatsapp"
+                    buttonClassName="resumeBtn profileIconBtns"
+                    onSubmit={()=>onRedirectTo(watsappToHref)}
+                    title=""
+                    name=""
+                    value={0}
+                    icon={watsappIcon}
                 />
             </div>
         </div>

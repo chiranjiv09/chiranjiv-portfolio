@@ -4,7 +4,7 @@ import React, { Fragment, useState } from 'react'
 import Button from '../../commonElements/Button';
 import projectPosterImg from '../../images/projectPoster.jpg';
 import githubImg from '../../images/github.png';
-import { backArrowIcon, CompanyIconEl, popupCrossIcon } from '../../icons';
+import { backArrowIcon, CompanyIconEl, ginIcon, popupCrossIcon } from '../../icons';
 import { isMobile, onMainConClick, onRedirectTo } from '../../data';
 
 export default function ProjectDetailsPopup({onPopupClick, popupData }) {
@@ -52,7 +52,11 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
 
                         <div onClick={()=>onRedirectTo(eachCrad.link)} className="projectPopupHeaderContent popupGitBoxMobile">
                             <div>
-                                <img className='projectPopupGitIcon' src={githubImg} alt="" />
+                                {/* <img className='projectPopupGitIcon' src={githubImg} alt="" /> */}
+                                <span className='projectPopupGitIcon'>
+                                    {ginIcon}
+                                </span>
+                                
                                 _Git link:
                             </div>
                             <span>{eachCrad.link}</span>
@@ -88,7 +92,11 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
                 <div className="projectPopuprightCon">
                     <div className="projectPopupHeaderCon">
                         <p onClick={()=>onRedirectTo(eachCrad.link)} className="projectPopupHeaderContent">
-                        <img className='projectPopupGitIcon' src={githubImg} alt="" />
+                        {/* <img className='projectPopupGitIcon' src={githubImg} alt="" /> */}
+                        <span className='projectPopupGitIcon'>
+                            {ginIcon}
+                        </span>
+                        
                         _Git link:
                         <span>{eachCrad.link}</span>
                         </p>

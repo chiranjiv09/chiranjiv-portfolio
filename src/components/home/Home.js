@@ -2,13 +2,12 @@ import React, { Fragment, useEffect, useState } from 'react';
 import './home.css';
 
 import emailImg from '../../images/email.png';
-import githubImg from '../../images/github.png';
 import leetcodeImg from '../../images/leetcode.png';
 import linkdinImg from '../../images/linkdin.png';
 import watsappImg from '../../images/whatsapp.png';
 
 import Button from '../../commonElements/Button';
-import { fileIcon } from '../../icons';
+import { fileIcon, GitIconBlack, gitIconBlack } from '../../icons';
 import { basicDetails, mailtoHref, onRedirectTo, watsappToHref } from '../../data';
 import ResumePopup from './ResumePopup';
 
@@ -17,23 +16,27 @@ const SocialMediaIcons = () => {
     return(
         <Fragment>
             <div onClick={()=>onRedirectTo(mailtoHref)} className="iconHoldingCon">
-                <img className='rightSideSocialIcons' src={emailImg} alt="" />
+                <img title='email' className='rightSideSocialIcons' src={emailImg} alt="" />
+            </div>
+
+            <div title="github" className="iconHoldingCon">
+                <GitIconBlack
+                    key="Homegithub"
+                    className="rightSideSocialIcons" 
+                    onClick={()=>onRedirectTo(basicDetails.github)}
+                />
             </div>
 
             <div className="iconHoldingCon">
-                <img onClick={()=>onRedirectTo(basicDetails.github)} className='rightSideSocialIcons' src={githubImg} alt="" />
+                <img title='leetcode' onClick={()=>onRedirectTo(basicDetails.leetcode)} className='rightSideSocialIcons' src={leetcodeImg} alt="" />
             </div>
 
             <div className="iconHoldingCon">
-                <img onClick={()=>onRedirectTo(basicDetails.leetcode)} className='rightSideSocialIcons' src={leetcodeImg} alt="" />
+                <img title='linkedin' onClick={()=>onRedirectTo(basicDetails.linkedin)} className='rightSideSocialIcons' src={linkdinImg} alt="" />
             </div>
 
             <div className="iconHoldingCon">
-                <img onClick={()=>onRedirectTo(basicDetails.linkedin)} className='rightSideSocialIcons' src={linkdinImg} alt="" />
-            </div>
-
-            <div className="iconHoldingCon">
-                <img onClick={()=>onRedirectTo(watsappToHref)} className='rightSideSocialIcons' src={watsappImg} alt="" />
+                <img title='watsapp' onClick={()=>onRedirectTo(watsappToHref)} className='rightSideSocialIcons' src={watsappImg} alt="" />
             </div>
         </Fragment>
     )

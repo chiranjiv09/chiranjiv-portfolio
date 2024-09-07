@@ -199,11 +199,6 @@
     align-items: center;
 }
 
-/* .rightSideSocialIcons svg{
-    max-width: 28px;
-    max-height: 28px;
-} */
-
 .footerIconHoldingCon{
     height: 40px;
     display: flex;
@@ -218,6 +213,7 @@
     border-left: 1px solid #1E2D3D;
 }
 
+.footerSocialIcons svg,
 .footerSocialIcons{
     width: 28px;
     height: 28px;
@@ -379,6 +375,7 @@
         min-width: 430px;
     }
 
+    .footerSocialIcons svg,
     .footerSocialIcons{
         width: 22px;
         height: 22px;

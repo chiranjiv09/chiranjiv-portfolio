@@ -7,27 +7,30 @@ import linkdinImg from '../../images/linkdin.png';
 import leetcodeGrayImg from '../../images/leetcodeGray.png';
 import watsappImg from '../../images/whatsapp.png';
 
-import { basicDetails, mailtoHref, onRedirectTo, watsappToHref } from '../../data';
+import { basicDetails, mailtoHref, onRedirectTo, watsappToHref } from '../../data'; 
+import { ginIcon } from '../../icons';
 
 const Footer = () => {
     return (
         <footer className="footerMianCon">
             <p className="footerFindMeText">find me in:</p>
-            <div className="footerIconHoldingCon">
-                <img onClick={()=>onRedirectTo(basicDetails.github)} className='footerSocialIcons' src={githubImg} alt="" />
+            <div className="footerIconHoldingCon"> 
+                <span title="github" onClick={()=>onRedirectTo(basicDetails.github)} className='footerSocialIcons'>
+                    {ginIcon}
+                </span>
             </div>
             <div className="footerIconHoldingCon">
-                <img onClick={()=>onRedirectTo(basicDetails.linkedin)} className='footerSocialIcons' src={linkdinImg} alt="" />
+                <img title='linkedin' onClick={()=>onRedirectTo(basicDetails.linkedin)} className='footerSocialIcons' src={linkdinImg} alt="" />
             </div>
             <div className="footerIconHoldingCon">
-                <img onClick={()=>onRedirectTo(basicDetails.leetcode)} className='footerSocialIcons' src={leetcodeGrayImg} alt="" />
-            </div>
-
-            <div className="footerIconHoldingCon">
-                <img onClick={()=>onRedirectTo(watsappToHref)} className='footerSocialIcons' src={watsappImg} alt="" />
+                <img title='leetcode' onClick={()=>onRedirectTo(basicDetails.leetcode)} className='footerSocialIcons' src={leetcodeGrayImg} alt="" />
             </div>
 
-            <div onClick={()=>onRedirectTo(mailtoHref)} className="footerFindMeText footerCornerEmailBox">
+            <div className="footerIconHoldingCon">
+                <img title='Watsapp' onClick={()=>onRedirectTo(watsappToHref)} className='footerSocialIcons' src={watsappImg} alt="" />
+            </div>
+
+            <div title='email' onClick={()=>onRedirectTo(mailtoHref)} className="footerFindMeText footerCornerEmailBox">
                 {basicDetails.email}
                 <img src={emailImg} alt="" />
             </div>
