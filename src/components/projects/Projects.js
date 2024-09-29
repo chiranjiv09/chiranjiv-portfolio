@@ -6,24 +6,57 @@ import { projectDetails } from '../../data';
 import ProjectDetailsPopup from './ProjectDetailsPopup';
 import DetailsFolder from '../../commonElements/DetailsFolder';
 import { arrowIcon } from '../../icons';
+import ImagesPopup from '../../commonElements/ImagesPopup';
+
+const initialState = {
+    isPopup: false, selectedIndex: 0, urlList:[],
+}
+
+const initialObj = {
+    isPopup: false,
+    data: {},
+    index: 0,
+}
 
 export default function Projects({onSelectBlock, selectedItem, folderBlock}) {
-  const [popupData, setPopupData ] = useState({isPopup: false});
+  const [popupData, setPopupData ] = useState(initialObj);
+  const [imagePopup, setImagePopup ] = useState(initialState);
 
   const onPopupClick = (identifier, data, index) => {
     let obj = {};
     if(identifier == "OPEN"){
-        obj = {
+        setPopupData(prev=>({
+            ...prev,
             isPopup: true,
             data: data,
             index: index,
-        }
+        }))
     }else{
-        obj = { isPopup: false}
+        setPopupData(initialObj)
     }
-
-    setPopupData(obj);
   };
+
+  const onImagePopup = (identifier, index, urlList) => {
+    switch(identifier){
+        case "OPEN":
+            setImagePopup(prev=> ({
+                ...prev, 
+                isPopup: true, 
+                urlList:[...urlList],
+                selectedIndex : index,
+            }));
+            break;
+        case "CLOSE":
+            setImagePopup(initialState);
+            break;
+        case "INDEX":
+            setImagePopup(prev=> ({
+                ...prev, 
+                selectedIndex : index,
+            }));
+            break;
+    }
+  }
 
   return (
     <div className="projectsMainCon">
@@ -32,7 +65,11 @@ export default function Projects({onSelectBlock, selectedItem, folderBlock}) {
         <ProjectDetailsPopup 
             onPopupClick={onPopupClick} 
             popupData={popupData}
+            onImagePopup={onImagePopup}
         />
+        }
+        {imagePopup.isPopup &&
+        <ImagesPopup imagePopup={imagePopup} onImagePopup={onImagePopup} />
         }
 
         <div className='topFolderConForMobile'>

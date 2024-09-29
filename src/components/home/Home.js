@@ -7,7 +7,7 @@ import linkdinImg from '../../images/linkdin.png';
 import watsappImg from '../../images/whatsapp.png';
 
 import Button from '../../commonElements/Button';
-import { fileIcon, GitIconBlack, gitIconBlack } from '../../icons';
+import { fileIcon, GitIconBlack } from '../../icons';
 import { basicDetails, mailtoHref, onRedirectTo, watsappToHref } from '../../data';
 import ResumePopup from './ResumePopup';
 
@@ -67,7 +67,7 @@ const Home = () => {
                 <h2 className="leftSideUsername line-1 anim-typewriter">{basicDetails.name}</h2>
 
                 <div className="homeRightSideConForMobile">
-                    <img alt="" src="https://w0.peakpx.com/wallpaper/454/815/HD-wallpaper-naruto-art-fictional-character-thumbnail.jpg" className="profileImage" />
+                    <img alt="" src={basicDetails.profileImage} className="profileImage" />
                 </div>
 
                 <p className="leftSideUserRole">&gt; <span style={{color : currentText == "Java Full-Stack" ? "#43D9AD" : currentText == "Web" ? "#C99FFF" : "#8C99FF" }}>{currentText}</span> Developer</p>
@@ -87,9 +87,14 @@ const Home = () => {
             </div>
 
             <div className="homeRightSideCon">
-                <img alt="" src="https://w0.peakpx.com/wallpaper/454/815/HD-wallpaper-naruto-art-fictional-character-thumbnail.jpg" className="profileImage" />
+                {/* <iframe src={basicDetails.profileImage} className="profileImage" allow="autoplay"></iframe> */}
+
+                <img 
+                    alt="" 
+                    src={basicDetails.profileImage} className="profileImage" 
+                />
                 <div className="siderIconsCon">
-                    <span>Follow me---------</span>
+                    <span>Follow me---</span>
                     <SocialMediaIcons />
                 </div>
             </div>

@@ -75,6 +75,12 @@ export const popupCrossIcon =
   <path d="M7 21L22 6M7 6L22 21" stroke="black" stroke-width="2" stroke-linecap="round"/>
 </svg>
 
+export const blackPopupCrossIcon = 
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+  <rect width="28" height="28" fill="black"/>
+  <path d="M7 21L22 6M7 6L22 21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
 export const backArrowIcon = 
 <svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" viewBox="0 0 6 9" fill="none">
   <path d="M0 4.37206L6 0.12204L6 8.62207L0 4.37206Z" fill="white"/>

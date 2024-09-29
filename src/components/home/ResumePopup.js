@@ -22,9 +22,10 @@ export default function ResumePopup({setIsResumeOpen}) {
             </div>
 
             <div className='resumeContainer'>
-                <iframe title='resume'
+                {/* <iframe title='resume'
                     src={basicDetails.resume} className="resumeFrame"
-                />
+                /> */}
+                <iframe src="https://drive.google.com/file/d/12FHzn-CN7RMHYz_sRhOKCq8RNXS42gqm/preview" className="iframeResumeClassTag" allow="autoplay"></iframe>
             </div>
             
         </div>

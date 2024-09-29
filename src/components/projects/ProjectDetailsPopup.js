@@ -7,11 +7,11 @@ import githubImg from '../../images/github.png';
 import { backArrowIcon, CompanyIconEl, ginIcon, popupCrossIcon } from '../../icons';
 import { isMobile, onMainConClick, onRedirectTo } from '../../data';
 
-export default function ProjectDetailsPopup({onPopupClick, popupData }) {
+export default function ProjectDetailsPopup({onPopupClick, popupData, onImagePopup }) {
     const [selectedMedia, setSelectedMedia] = useState("I");
 
     let eachCrad = popupData.data ? popupData.data : "" ;
-    let index = eachCrad.index ? eachCrad.index : "";
+    let index = popupData.index ? popupData.index : "";
 
     return (
         <div className="projectPopupStaticCon" onClick={(e)=>onMainConClick(e, 'innerContainer', onPopupClick, "CLOSE" )} >
@@ -134,8 +134,13 @@ export default function ProjectDetailsPopup({onPopupClick, popupData }) {
                     <div className="projectMediaDisplayingCon">
                         {eachCrad.images.map((eachMedia, index)=>{
                         return (
-                            <div id={`eachMedia_${index}`} className="projectMediaCard">
-                                <img alt="" src={eachMedia} className='eachProjectMediaEl' />
+                            <div key={`eachMedia_${index}`} id={`eachMedia_${index}`} className="projectMediaCard">
+                                <img 
+                                    alt="" 
+                                    src={eachMedia} 
+                                    className='eachProjectMediaEl'
+                                    onClick={()=>onImagePopup("OPEN", index, eachCrad.images)}
+                                />
                             </div>
                         )
                         })}

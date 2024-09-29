@@ -85,21 +85,55 @@ import systemDesign from './images/systemDesign.jpg';
 import nextjs from './images/nextjs.jpg';
 import figma from './images/figma.webp';
 
+// Profile pic
+import profilePic from './images/profilePic.JPG';
+
+// Hospital project Images
+import projImage1 from './projectImages/HospItalProjectPics/projImage1.jpeg';
+import projImage2 from './projectImages/HospItalProjectPics/projImage2.jpeg';
+import projImage3 from './projectImages/HospItalProjectPics/projImage3.jpeg';
+import projImage4 from './projectImages/HospItalProjectPics/projImage4.jpeg';
+import projImage5 from './projectImages/HospItalProjectPics/projImage5.jpeg';
+import projImage6 from './projectImages/HospItalProjectPics/projImage6.jpeg';
+import projImage7 from './projectImages/HospItalProjectPics/projImage7.jpeg';
+import projImage8 from './projectImages/HospItalProjectPics/projImage8.jpeg';
+import projImage9 from './projectImages/HospItalProjectPics/projImage9.jpeg';
+import projImage10 from './projectImages/HospItalProjectPics/projImage10.jpeg';
+import projImage11 from './projectImages/HospItalProjectPics/projImage11.jpeg';
+import projImage12 from './projectImages/HospItalProjectPics/projImage12.jpeg';
+import projImage13 from './projectImages/HospItalProjectPics/projImage13.jpeg';
+import projImage14 from './projectImages/HospItalProjectPics/projImage14.jpeg';
+// import projImage15 from './projectImages/HospItalProjectPics/projImage15.png';
+// import projImage16 from './projectImages/HospItalProjectPics/projImage16.png';
+// import projImage17 from './projectImages/HospItalProjectPics/projImage17.png';
+// import projImage18 from './projectImages/HospItalProjectPics/projImage18.png';
+// import projImage19 from './projectImages/HospItalProjectPics/projImage19.png';
+// import projImage20 from './projectImages/HospItalProjectPics/projImage20.png';
+// import projImage21 from './projectImages/HospItalProjectPics/projImage21.png';
+// import projImage22 from './projectImages/HospItalProjectPics/projImage22.png';
+// import projImage23 from './projectImages/HospItalProjectPics/projImage23.png';
+
+// Pdf to Image converter project Images
+import projectPdfImg1 from './projectImages/pdfToImagConverterPics/projectPdfImg1.jpeg';
+import projectPdfImg2 from './projectImages/pdfToImagConverterPics/projectPdfImg2.jpeg';
+import projectPdfImg3 from './projectImages/pdfToImagConverterPics/projectPdfImg3.jpeg';
+
+
+// `https://drive.google.com/thumbnail?id=${"1NwVuKcidpUWxwzBmdUjafZg8c5VxXTC4"}`
 
 export const basicDetails = {
     name: "Chiranjiv Kushwah",
     designetion:"Software developer",
-    profileImage: null,
+    profileImage: profilePic,
     workingRoles: ['Software', 'Web', 'Java Full-Stack'],
     careerObjective:"A passionate Software Developer, I thrive on learning and building innovative solutions. I specialize in infrastructure, containerization, and Serverless/Cloud technologies, driven by a love for programming and community contribution.",
-    resume:"https://chiranjiv-personal.s3.ap-south-1.amazonaws.com/Chiranjiv-Kushwah-Resume.pdf",
+    resume:"https://drive.google.com/uc?id=12FHzn-CN7RMHYz_sRhOKCq8RNXS42gqm",
     mobile:"8962311939",
     email:"kushwahjick@gmail.com",
     github:"https://github.com/chiranjiv09",
     linkedin:"https://www.linkedin.com/in/chiranjiv-kushwah-8333b2201/",
     leetcode:"https://leetcode.com/u/kushwahjick/",
-}
-
+};
 
 const subject = "Hello there!";
 const body = "Just wanted to say hi.";
@@ -422,7 +456,31 @@ export const projectDetails = [
         description:"Built web app for booking, health records, and management.",
         link:"https://github.com/chiranjiv09/g2-spring-api-gateway",
         contant: "Developed a web application for patients to book appointments, access health records, receive notifications and enable physicians and nurses to manage and update diagnosis and medication details efficiently.",
-        images: [],
+        images: [
+            projImage1,
+            projImage2, 
+            projImage3 ,
+            projImage4 ,
+            projImage5 ,
+            projImage6 ,
+            projImage7 ,
+            projImage8 ,
+            projImage9 ,
+            projImage10,
+            projImage11,
+            projImage12,
+            projImage13,
+            projImage14,
+            // projImage15,
+            // projImage16,
+            // projImage17,
+            // projImage18,
+            // projImage19,
+            // projImage20,
+            // projImage21,
+            // projImage22,
+            // projImage23,
+        ],
         videos: [],
     },
     {
@@ -437,7 +495,7 @@ export const projectDetails = [
         description:"Converts PDFs to customizable images in JPEG, JPG, PNG formats; GitHub code available.",
         link:"https://github.com/chiranjiv09/pdf-converter",
         contant: "This project converts PDFs into customizable named images, supporting JPEG, JPG, and PNG formats. It offers flexibility and personalization, with source code available on GitHub for implementation insights and functionality customization.",
-        images: [],
+        images: [projectPdfImg3, projectPdfImg2, projectPdfImg1, ],
         videos: [],
     },
     {
